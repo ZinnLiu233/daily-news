@@ -1,18 +1,225 @@
 {
   "date": "2026-08-15",
-  "generated_at": "",
-  "signal": "",
+  "generated_at": "2026-08-15T23:49:34.088086+00:00",
+  "signal": "Across Aug 10-15, every major lab converged on the same strategy: ship smaller, cheaper agentic models (Muse Glimmer, Gemini 3.7 Flash, GPT-5.6) that run closer to the user, while simultaneously hardening the harness layer (LangGraph 1.0 durable state, Nova Act browser reliability, Claude Code self-hosted) — the bottleneck has shifted from raw model power to reliable agent orchestration and deployment economics.",
   "sections": {
-    "top": [],
-    "ai_agents": [],
-    "ai_infra": [],
-    "products": [],
-    "markets": [],
-    "world": [],
-    "for_you": []
+    "top": [
+      {
+        "title": "Meta open-sources Muse Glimmer — compact agentic model that runs on a single GPU",
+        "url": "https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html",
+        "source": "CNBC / Meta",
+        "badge": "Muse Spark 1.2 also going open-weight",
+        "summary": "On Aug 10, Meta released Muse Glimmer, a small open-weight model purpose-built for agentic tasks that runs on a Mac/PC with one graphics card, and confirmed Muse Spark 1.2 will be open-sourced. Zuckerberg framed it as a U.S. open-AI leadership push.",
+        "why_it_matters": "It marks the first time Meta's frontier-grade agent reasoning is packaged for edge/local deployment, directly competing with API-only frontier models on cost and privacy.",
+        "why_you_care": "As a learning reference for Production-grade AI: how to design a model that's 'good enough' for tool loops at 1/10th the serving cost."
+      },
+      {
+        "title": "LangGraph 1.0 & LangChain 1.0 reach GA with durable state and standardized tools",
+        "url": "https://blog.langchain.com/langchain-langgraph-1dot0/",
+        "source": "LangChain Blog",
+        "badge": "v1.0 milestone",
+        "summary": "Announced this week, v1.0 brings production-ready agent graphs: standardized tool definitions, middleware customization, durable state persistence, and checkpointed workflows. LangGraph is already powering agents at Uber, LinkedIn, and Klarna.",
+        "why_it_matters": "It's the clearest signal that agent frameworks are maturing from demos to stateful, recoverable production systems — comparable to moving from scripts to workflow engines.",
+        "why_you_care": "Directly maps to your mental model layer 'Durable workflows / state machines' — the layer where Production breaks."
+      },
+      {
+        "title": "S&P 500 hits fresh all-time high (7,814) on cool CPI and AI earnings",
+        "url": "https://intellectia.ai/blog/sp500-record-high-august-14-2026",
+        "source": "Intellectia / CNBC",
+        "badge": "CPI 3.4% · AI tape",
+        "summary": "The S&P 500 closed at a record 7,814.88 on Aug 14, driven by July CPI at ~3.4% YoY (tame) and strong AI-linked earnings. Traders raised Fed pause expectations into September.",
+        "why_it_matters": "Cool inflation + AI capex is the current market flywheel: lower rate fears lift multiples while AI spend lifts earnings.",
+        "why_you_care": "Finance Concept — CPI & multiples: cooler CPI → lower expected Fed hikes → lower discount rate → higher present value of future tech earnings."
+      }
+    ],
+    "ai_agents": [
+      {
+        "title": "Google drops Gemini 3.7 Flash — half the price of 3.6, now powering Spark agent",
+        "url": "https://www.digitaltrends.com/computing/google-drops-gemini-3-7-flash-model-and-its-ready-to-handle-your-chores-with-the-spark-agent/",
+        "source": "Digital Trends / Google",
+        "badge": "Aug 14–15",
+        "summary": "Google launched Gemini 3.7 Flash on Aug 14–15, at ~50% the price of 3.6. Its first client is Google's own cloud-based Spark agent, where it improves tool use and multi-step task accuracy per AutomationBench.",
+        "why_it_matters": "Same pattern as Meta: faster, cheaper inference-tuned models optimized for agent loops, not chatbot flair.",
+        "why_you_care": "Links to 'Cost / latency / model routing' — when to route chores to a Flash-class model vs a frontier one."
+      },
+      {
+        "title": "OpenAI ships GPT-5.6 — stronger agent performance at lower cost, plus multi-agent orchestration",
+        "url": "https://openai.com/index/gpt-5-6/",
+        "source": "OpenAI / Releasebot",
+        "badge": "Coding Agent Index SOTA",
+        "summary": "GPT-5.6 (Aug 13) sets a new state-of-the-art on the Artificial Analysis Coding Agent Index (80, +2.8) with less than half the output tokens, adds native multi-agent orchestration and programmatic tool controls in the Responses API.",
+        "why_it_matters": "OpenAI is moving agent logic from prompt hacks into first-class API primitives (reasoning continuity, tool orchestration).",
+        "why_you_care": "Maps to 'Agent harness vs model' — now the platform itself offers orchestration, reducing custom harness code."
+      },
+      {
+        "title": "Amazon Nova Act now generally available — reliable agents for browser UI workflows",
+        "url": "https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/",
+        "source": "AWS",
+        "badge": "Computer use GA",
+        "summary": "AWS GA'd Nova Act, a service for agents that automate browser tasks — form filling, search & extract, shopping/booking, QA — with reliability controls for production UI automation.",
+        "why_it_matters": "Brings 'computer use' from research demo to managed service with observability — the hardening layer every browser agent needs.",
+        "why_you_care": "Directly relevant to 'Computer use' and 'Reliability / retries' in your 24-topic thread."
+      },
+      {
+        "title": "Claude Code self-hosted environments enter public beta",
+        "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+        "source": "Anthropic / Claude Blog",
+        "badge": "Aug 6 · public beta",
+        "summary": "Teams can now run Claude Code cloud sessions on their own infrastructure (self-hosted runner on Team/Enterprise). Public beta as of Aug 6, with internal-network access and custom controls.",
+        "why_it_matters": "Addresses the #1 enterprise blocker for coding agents: data residency and network isolation without losing cloud orchestration.",
+        "why_you_care": "Sandboxing / permissions in practice — how Anthropic solves 'run agent near my repo but keep it fenced'."
+      },
+      {
+        "title": "Memory for AI Agents — context engineering as a new paradigm",
+        "url": "https://thenewstack.io/memory-for-ai-agents-a-new-paradigm-of-context-engineering/",
+        "source": "The New Stack",
+        "summary": "A deep explainer framing agent memory as context engineering: how working memory, long-term recall, and procedural memory are curated and injected into the window, not just appended.",
+        "why_it_matters": "As context windows grow, the differentiator shifts from size to what you choose to put in and when.",
+        "why_you_care": "Core to your thread #6–8: Context engineering vs naively stuffing memory."
+      },
+      {
+        "title": "MCP roadmap 2026 — biggest production pain points about to be solved",
+        "url": "https://thenewstack.io/model-context-protocol-roadmap-2026/",
+        "source": "The New Stack",
+        "badge": "MCP",
+        "summary": "The MCP roadmap post argues the protocol's main remaining blockers for production — stateless flows, auth, transport, tool discovery — are being tackled in the July 28 spec and follow-ons, letting teams expose services via MCP servers instead of custom integrations.",
+        "why_it_matters": "If MCP stabilizes, 'connect your tools' becomes a standard layer rather than bespoke harness code.",
+        "why_you_care": "Your topic #10 (MCP): when does MCP replace direct tool-calling?"
+      }
+    ],
+    "ai_infra": [
+      {
+        "title": "NVIDIA: Optimizing inference for long context & large batches with NVFP4 KV cache",
+        "url": "https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/",
+        "source": "NVIDIA Developer Blog",
+        "badge": "KV cache · quantization",
+        "summary": "NVIDIA details NVFP4-quantized KV cache to handle long-context, large-batch inference: lower memory footprint and higher throughput while preserving quality — critical for agentic workloads that keep long histories.",
+        "why_it_matters": "KV cache is the hidden tax on agents; quantizing it is the cheapest way to scale long-horizon tasks.",
+        "why_you_care": "Infra topic #5–6: directly explains batching/KV cache cost for your agent loops."
+      },
+      {
+        "title": "Nvidia earnings preview — Aug 26 Q2 FY27 as the next AI-infra catalyst",
+        "url": "https://intellectia.ai/blog/nvidia-earnings-preview-august-2026-analysis",
+        "source": "Intellectia",
+        "badge": "Preview: Aug 26",
+        "summary": "Nvidia reports Q2 FY27 on Aug 26 — the pivotal print for the entire AI-infra trade. Wall Street expects another beat on data-center GPUs, with guidance on Blackwell ramp and supply shaping semis sentiment.",
+        "why_it_matters": "The print will set tone for NVDA, semis, and AI capex names into September.",
+        "why_you_care": "Watch for data-center revenue, gross margin, and Blackwell commentary — the read-through to META/MSFT/GOOGL capex."
+      },
+      {
+        "title": "Best infrastructure patterns for scalable AI inference",
+        "url": "https://www.mirantis.com/blog/best-infrastructure-for-scalable-ai-inference/",
+        "source": "Mirantis",
+        "summary": "A practitioner overview of scalable inference stacks — routing, batching, autoscaling, and serving patterns that keep latency predictable under spiky agent workloads.",
+        "why_it_matters": "Agentic traffic is bursty and tool-heavy; classic serving assumptions break without new batching/routing designs.",
+        "why_you_care": "Foundation for 'Production deployment' and 'Latency / throughput' in your infra mental model."
+      }
+    ],
+    "products": [
+      {
+        "title": "Meta launches Muse Code — AI agent for large codebases (beta)",
+        "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+        "source": "TechCrunch / Meta",
+        "badge": "Beta · Aug 5",
+        "summary": "Muse Code, in beta, tackles complete software-engineering tasks across large repos — Meta's first terminal coding agent, positioned against Claude Code and Codex.",
+        "why_it_matters": "Meta is entering the coding-agent harness race directly, pairing the open Muse models with an agent runtime.",
+        "why_you_care": "Compare harness designs: Muse Code vs Claude Code vs Codex — same goal, different tool/state choices."
+      },
+      {
+        "title": "10 open-source AI agent frameworks to watch in 2026",
+        "url": "https://pasqualepillitteri.it/en/news/1476/10-open-source-ai-agent-frameworks-2026",
+        "source": "Pasquale Pillitteri",
+        "summary": "A curated list of 10 OSS agent frameworks (including LangGraph, CrewAI, AutoGen) comparing language, hosting, and feature tradeoffs — useful as a shortlist for your first agentic POC.",
+        "why_it_matters": "Discovery-mode friendly: breadth-first map of the framework landscape without over-committing to one.",
+        "why_you_care": "Quick way to pick a framework for your small-game / AI-product experiments."
+      },
+      {
+        "title": "Trending AI repos on GitHub — real-time OSS rankings",
+        "url": "https://ossinsight.io/trending/ai",
+        "source": "OSSInsight",
+        "summary": "Live ranking of trending AI repos — a good daily scan for novel tools, agent demos, and infra utilities that haven't hit the news cycle yet.",
+        "why_it_matters": "Often surfaces the next LangGraph or MCP server before press coverage.",
+        "why_you_care": "Discovery habit: 2-min daily scan for idea generation."
+      }
+    ],
+    "markets": [
+      {
+        "title": "S&P 500, Nasdaq edge higher on cooler inflation — record chase continues",
+        "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-august-12-dow-sp-500-nasdaq-cpi-report-091555133.html",
+        "source": "Yahoo Finance / CNBC",
+        "badge": "Aug 12 CPI read",
+        "summary": "Stocks extended gains after July CPI printed cool, reinforcing the S&P record run. Tech led on AI earnings strength; rate-sensitive names also bid.",
+        "why_it_matters": "Confirms the CPI → rate-cut-odds → equity-multiple chain driving this rally.",
+        "why_you_care": "Finance Concept — discount rates: lower expected rates mechanically inflate valuations, especially long-duration tech."
+      },
+      {
+        "title": "Is Big Tech spending more just to stand still in the AI race? — capex balloon",
+        "url": "https://www.businessinsider.com/big-tech-spending-capex-earnings-season-memory-prices-ai-2026-7",
+        "source": "Business Insider",
+        "badge": "CapEx watch",
+        "summary": "Analysis argues hyperscalers' 2026 capex surge may be defensive — memory prices, GPUs, and datacenter build-outs force spend just to keep share. AI capex on track toward ~$725B for Big Tech this year.",
+        "why_it_matters": "Reframes AI infra spend: not just growth investment but table stakes with margin pressure.",
+        "why_you_care": "Finance Concept — CapEx vs OpEx & FCF: surging CapEx can depress free cash flow even as revenue grows; watch FCF conversion."
+      },
+      {
+        "title": "Meta Q2 recap — stock dips on guidance despite open-weight push",
+        "url": "https://www.cnbc.com/2026/07/29/meta-q2-earnings-report-2026.html",
+        "source": "CNBC",
+        "badge": "META",
+        "summary": "Meta's Q2 report (late July) saw shares dip on soft guidance and thinner free cash flow, even as the company leaned into open-weight AI (Muse line) and ad-infra strength.",
+        "why_it_matters": "Your employer ticker: market is weighing AI investment intensity against near-term FCF.",
+        "why_you_care": "Track META on margins, Reality Labs burn, and ad-revenue leverage to AI capex."
+      },
+      {
+        "title": "MiiHealth AI raises $2.8M to scale patient-intake agent (Phoenix)",
+        "url": "https://www.bizjournals.com/phoenix/news/2026/08/14/miihealth-raises-seed-round.html",
+        "source": "Phoenix Business Journal",
+        "badge": "Seed · Aug 14",
+        "summary": "MiiHealth AI closed $2.8M seed on Aug 14 to scale its patient-intake agent that automates front-desk workflows and EHR integration.",
+        "why_it_matters": "Small but representative: vertical AI agents (healthcare admin) are fundable at seed with narrow wedge + EHR moat.",
+        "why_you_care": "Startup idea signal — narrow, auditable workflows beat generic chatbots for first revenue."
+      }
+    ],
+    "world": [
+      {
+        "title": "White House national AI policy framework — push for unified federal approach",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/",
+        "source": "White House / Holland & Knight",
+        "badge": "Policy",
+        "summary": "The White House framework outlines nonbinding recommendations for a single federal AI regulatory approach, aiming to preempt a patchwork of state laws.",
+        "why_it_matters": "A unified framework would lower compliance complexity for AI products operating across states.",
+        "why_you_care": "If you're shipping an AI product in the U.S., this shapes your risk and deployment checklist."
+      }
+    ],
+    "for_you": [
+      {
+        "title": "Worth reading — LangGraph 1.0 durable state (your #24 Durable workflows)",
+        "url": "https://blog.langchain.com/langchain-langgraph-1dot0/",
+        "source": "For You",
+        "summary": "If you only read one thing, read the LangGraph 1.0 post on checkpointed, recoverable graphs. It answers Production question: what happens when your agent loop dies mid-tool-call?",
+        "why_it_matters": "Directly builds your mental model: State machine > free-form loop for reliability.",
+        "why_you_care": "Connects to durability/idempotency — the cheapest way to make your small-game agent survive restarts."
+      },
+      {
+        "title": "Worth saving — NVFP4 KV cache (your #5 Context engineering)",
+        "url": "https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/",
+        "source": "For You",
+        "summary": "Save the NVIDIA NVFP4 post as your reference for why agentic long-context gets expensive and how quantization changes the math.",
+        "why_it_matters": "You'll reuse this when you design your own agent's memory/window strategy.",
+        "why_you_care": "Links #5 Context window and #22 Cost/latency in one concrete infra technique."
+      },
+      {
+        "title": "Interesting connection — smaller agentic models + harness hardening",
+        "url": "https://openai.com/index/gpt-5-6/",
+        "source": "For You",
+        "summary": "Glimmer + Gemini Flash + GPT-5.6 token efficiency together signal a shift: labs optimize for agent economics, while LangGraph/Nova Act/Claude Code harden the harness. The next leap is not bigger models but cheaper, durable agents.",
+        "why_it_matters": "Helps you prioritize learning: harness/runtime > chasing model leaderboards.",
+        "why_you_care": "A model you can copy for your own roadmap: cheap router model + durable orchestration."
+      }
+    ]
   },
   "meta": {
-    "candidate_count": 0,
-    "selected_count": 0
+    "candidate_count": 72,
+    "selected_count": 23
   }
 }
