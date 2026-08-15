@@ -1,0 +1,4 @@
+
+Generate and publish today's Discovery Mode daily news briefing using the Daily News Publisher skill.
+Search broadly, prioritize signal over clickbait, preserve breadth, and do not over-personalize yet.
+Publish the static site, archive today's JSON + HTML, then DM me the page URL and top headline on WeChat.

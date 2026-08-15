@@ -1,0 +1,51 @@
+{
+  "site": {
+    "title": "Zijing Daily",
+    "subtitle": "AI · Infra · Products · Markets · World",
+    "timezone": "America/Los_Angeles",
+    "base_path": "/daily-news"
+  },
+  "discovery_mode": {
+    "enabled": true,
+    "target_items": 30,
+    "hard_max_items": 40,
+    "lookback_hours": 30
+  },
+  "sections": [
+    {
+      "id": "top",
+      "title": "🔥 Today's 3",
+      "max_items": 3
+    },
+    {
+      "id": "ai_agents",
+      "title": "🤖 AI / Agents",
+      "max_items": 8
+    },
+    {
+      "id": "ai_infra",
+      "title": "⚙️ AI Infra",
+      "max_items": 8
+    },
+    {
+      "id": "products",
+      "title": "🚀 Products / Startups / Open Source",
+      "max_items": 7
+    },
+    {
+      "id": "markets",
+      "title": "💰 Markets / Finance",
+      "max_items": 7
+    },
+    {
+      "id": "world",
+      "title": "🌎 World / US",
+      "max_items": 5
+    },
+    {
+      "id": "for_you",
+      "title": "🎯 For You",
+      "max_items": 4
+    }
+  ]
+}
