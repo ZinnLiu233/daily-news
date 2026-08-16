@@ -5,65 +5,64 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>pika - daily — 2026-08-15</title>
 <style>
-:root{--bg:#fdfbf7;--surface:#ffffff;--surface-soft:#f7f3ee;--ink:#1a1a18;--muted:#8a857e;--line:#ece6dc;--amber:#d48806;--amber-soft:#fef3c7;--sage:#6b7c3f;--slate:#6b7280;--radius:16px}
+:root{--bg:#fdfbf7;--card:#fff;--ink:#1e1c18;--muted:#9a9590;--line:#ebe6dd;--accent:#d48a1a;--accent-soft:#fdf2d8;--radius:16px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:760px;margin:0 auto;padding:28px 20px 80px}
-.masthead{padding:32px 0 24px;text-align:left;border-bottom:1px solid var(--line);margin-bottom:28px}
-.masthead h1{margin:0;font-size:30px;font-weight:800;letter-spacing:-0.03em}
-.masthead h1 span{color:var(--amber);font-weight:800}
-.masthead .sub{margin-top:6px;font-size:13px;color:var(--muted);letter-spacing:0.02em}
-.masthead .sub b{color:var(--ink);font-weight:600}
-.nav{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-.nav a{font-size:12px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--muted)}
-.nav a:hover{border-color:var(--amber);color:var(--ink)}
-.archive-bar{margin-top:14px;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.archive-bar a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 72px}
+.masthead{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;padding:10px 0 18px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.masthead-left h1{margin:0;font-size:28px;font-weight:800;letter-spacing:-.025em}
+.masthead-left h1 span{color:var(--accent)}
+.masthead-meta{font-size:12px;color:var(--muted);margin-top:6px}
+.nav{display:flex;flex-wrap:wrap;gap:8px}
+.nav a{font-size:12px;padding:7px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--muted)}
+.nav a:hover{border-color:var(--accent);color:var(--ink)}
+.archive-bar{margin:18px 0 6px;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.archive-bar a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
 .archive-bar a:hover{color:var(--ink)}
-.section{margin-top:36px}
-.section-title{font-size:15px;font-weight:700;letter-spacing:-0.01em;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.section-grid{display:flex;flex-direction:column;gap:12px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;transition:border-color .15s,box-shadow .15s}
-.card:hover{border-color:#e0d8cc;box-shadow:0 4px 20px rgba(0,0,0,.04)}
-.card-hero{border-color:var(--amber);background:linear-gradient(180deg,#fffef9 0%,#ffffff 100%);box-shadow:0 4px 24px rgba(212,136,6,.08)}
-.card-meta{font-size:11px;color:var(--muted);letter-spacing:.04em;margin-bottom:8px}
-.card-title{margin:0 0 8px;font-size:16px;line-height:1.45;font-weight:700;letter-spacing:-.01em}
+.section{margin-top:28px}
+.section-title{font-size:14px;font-weight:700;letter-spacing:-.01em;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.section-num{color:var(--accent);margin-right:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;display:flex;flex-direction:column;gap:0;transition:box-shadow .15s,border-color .15s}
+.card:hover{border-color:#ddd5c6;box-shadow:0 8px 28px rgba(0,0,0,.06)}
+.card-meta{font-size:11px;color:var(--muted);letter-spacing:.02em;margin-bottom:8px}
+.card-title{margin:0 0 6px;font-size:15px;line-height:1.45;font-weight:700}
 .card-title a{text-decoration:none}
-.card-title a:hover{color:var(--amber)}
-.card-en{font-size:12px;color:var(--muted);margin:-4px 0 8px;line-height:1.5}
-.card-summary{margin:0;font-size:14px;line-height:1.75;color:#2b2b2b}
-.card-why{margin-top:12px;padding:10px 12px;background:var(--amber-soft);border-radius:10px;font-size:13px;line-height:1.6}
-.card-why span{font-weight:700;color:var(--amber);margin-right:6px}
-.card-excerpt{margin:12px 0 0;padding:10px 12px;border-left:3px solid var(--line);background:var(--surface-soft);border-radius:0 10px 10px 0;font-size:12px;line-height:1.65;color:var(--muted)}
-.card-excerpt span{font-weight:700;color:var(--ink);margin-right:6px}
-.card-link{display:inline-block;margin-top:12px;font-size:12px;font-weight:600;color:var(--amber);text-decoration:none}
+.card-title a:hover{color:var(--accent)}
+.card-en{font-size:11px;color:var(--muted);margin-bottom:8px;line-height:1.5}
+.card-summary{margin:0;font-size:13.5px;line-height:1.7;color:#2c2c2a}
+.card-why{margin:10px 0 0;font-size:12.5px;line-height:1.6;color:#5a554f;font-style:italic}
+.card-excerpt{margin:8px 0 0;font-size:11.5px;line-height:1.6;color:var(--muted);border-left:2px solid var(--line);padding-left:10px}
+.card-link{margin-top:12px;font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
 .card-link:hover{text-decoration:underline}
-.signal{margin-top:36px;background:var(--ink);color:#fdfbf7;border-radius:var(--radius);padding:20px 22px}
-.signal-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:8px}
-.signal p{margin:0;font-size:14px;line-height:1.7;color:#e8e4de}
-.muted{color:var(--muted);font-size:13px}
-footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
-@media(max-width:640px){.wrap{padding:20px 14px 64px}.masthead h1{font-size:24px}.card{padding:16px}}
+.signal{margin:24px 0;background:#1e1c18;color:#fdfbf7;border-radius:var(--radius);padding:18px 20px}
+.signal-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
+.signal p{margin:0;font-size:13.5px;line-height:1.65;color:#e8e2d8}
+.muted{color:var(--muted);font-size:13px;grid-column:1/-1}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+@media(max-width:640px){.wrap{padding:18px 14px 56px}.masthead{flex-direction:column;align-items:stretch}.cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <main class="wrap">
 <header class="masthead">
-<h1><span>pika</span> — daily</h1>
-<div class="sub"><b>2026-08-15</b> · AI · Infra · Products · Markets · World · America/Los_Angeles · 每日 08:00 PT 更新</div>
-<nav class="nav"><a href="#top">🔥 Today&#x27;s 3</a><a href="#ai_agents">🤖 AI / Agents</a><a href="#ai_infra">⚙️ AI Infra</a><a href="#products">🚀 Products / Startups / Open Source</a><a href="#markets">💰 Markets / Finance</a><a href="#world">🌎 World / US</a><a href="#for_you">🎯 For You</a></nav>
-<div class="archive-bar"><span>归档</span><a href="/daily-news/archive/2026-08-16.html">2026-08-16</a><a href="/daily-news/archive/2026-08-15.html">2026-08-15</a></div>
+  <div class="masthead-left">
+    <h1><span>pika</span> — daily</h1>
+    <div class="masthead-meta">2026-08-15 · AI · Infra · Products · Markets · World · America/Los_Angeles · 每日 08:00 PT</div>
+    <div class="archive-bar"><span>归档</span><a href="/daily-news/archive/2026-08-16.html">2026-08-16</a><a href="/daily-news/archive/2026-08-15.html">2026-08-15</a></div>
+  </div>
+  <nav class="nav"><a href="#top">🔥 Today&#x27;s 3</a><a href="#ai_agents">🤖 AI / Agents</a><a href="#ai_infra">⚙️ AI Infra</a><a href="#products">🚀 Products / Startups / Open Source</a><a href="#markets">💰 Markets / Finance</a><a href="#world">🌎 World / US</a><a href="#for_you">🎯 For You</a></nav>
 </header>
 <section class="signal"><div class="signal-label">The Signal</div><p>The Aug 11-15 cluster shows a single throughline: AI is scaling by distribution, not just size — Gemini at 1B users via product integration, Muse Glimmer via single-GPU edge, Nova Act via managed browser automation, and Claude/Cursor via auto-mode agents on your own infra. The scarce resource is no longer model IQ but reliable deployment at scale, which is why infra (KV cache, datacenter buildout) and harness (durable state, routers) dominated the week&#x27;s real releases.</p></section>
-<section id="top"><h2 class="section-title">🔥 Today&#x27;s 3</h2><div class="section-grid">
-    <article class="card card-hero">
+<section id="top"><h2 class="section-title"><span class="section-num" aria-hidden="true">—</span> 🔥 Today&#x27;s 3</h2><div class="cards">
+    <article class="card">
       <div class="card-meta">Forbes / Google Blog · 2026-08-11 · 1B MAU · Aug 11</div>
       <h3 class="card-title"><a href="https://www.forbes.com/sites/antoniopequenoiv/2026/08/11/gemini-becomes-googles-fastest-growing-product-ever-after-hitting-1-billion-monthly-users/" target="_blank" rel="noopener noreferrer">Gemini 月活破 10 亿，成为 Google 史上增长最快的产品</a></h3>
       <div class="card-en">Gemini hits 1B monthly users — Google&#x27;s fastest-growing product ever</div>
       <p class="card-summary">8 月 11 日 Google 宣布 Gemini App 月活突破 10 亿。Sundar Pichai 称这是公司史上增长最快的产品，增速超过 Search 初期。背后是与 Search、Android、Workspace 的深度集成分发。</p>
-      <div class="card-why"><span>为什么重要</span>说明 AI 规模化的新路径是 distribution（产品集成）而非单纯堆模型大小。对做 AI 产品的人，这是比参数竞赛更值得研究的增长范式。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Gemini has become Google&#x27;s fastest-growing product ever, surpassing 1 billion monthly active users</blockquote>
+      <p class="card-why">— 说明 AI 规模化的新路径是 distribution（产品集成）而非单纯堆模型大小。对做 AI 产品的人，这是比参数竞赛更值得研究的增长范式。</p>
+      <p class="card-excerpt">Gemini has become Google&#x27;s fastest-growing product ever, surpassing 1 billion monthly active users</p>
       <a class="card-link" href="https://www.forbes.com/sites/antoniopequenoiv/2026/08/11/gemini-becomes-googles-fastest-growing-product-ever-after-hitting-1-billion-monthly-users/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -71,8 +70,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">Claude Code 默认开启自动模式，Anthropic 把 Agent 开关拨向自主执行</a></h3>
       <div class="card-en">Claude Code auto mode now default — Anthropic flips the agent switch Aug 14</div>
       <p class="card-summary">Anthropic 宣布 Claude Code 的 auto mode 将于 8 月 14 日起默认开启，权限从 opt-in 改为 opt-out。Agent 可在无需逐次确认的情况下连续执行工具调用。</p>
-      <div class="card-why"><span>为什么重要</span>这是 coding agent 从 human-in-the-loop 向 autonomous 的关键拐点，直接考验 harness 的权限设计与可回滚性。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Anthropic is turning Claude Code&#x27;s auto mode on by default, shifting permissions to opt-out</blockquote>
+      <p class="card-why">— 这是 coding agent 从 human-in-the-loop 向 autonomous 的关键拐点，直接考验 harness 的权限设计与可回滚性。</p>
+      <p class="card-excerpt">Anthropic is turning Claude Code&#x27;s auto mode on by default, shifting permissions to opt-out</p>
       <a class="card-link" href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -80,17 +79,17 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.reuters.com/business/cooler-inflation-data-may-force-warshs-divided-fed-hold-line-rates-2026-08-14/" target="_blank" rel="noopener noreferrer">CPI 回落至约 3.4%，但美联储内部分歧，标普守住 7814 点纪录高位</a></h3>
       <div class="card-en">CPI cools to ~3.4% but Fed remains divided — S&amp;P holds record 7,814</div>
       <p class="card-summary">7 月 CPI 约 3.4% 略低于预期，标普 500 维持 7814 点历史高位。但美联储官员对是否降息仍存分歧，市场对 9 月降息定价摇摆。</p>
-      <div class="card-why"><span>为什么重要</span>理解通胀-利率-估值的传导链，是判断 AI 相关资产定价的关键背景。</div>
-      <blockquote class="card-excerpt"><span>原文</span>CPI cools to 3.4% but Fed remains divided on next move as S&amp;P holds record highs</blockquote>
+      <p class="card-why">— 理解通胀-利率-估值的传导链，是判断 AI 相关资产定价的关键背景。</p>
+      <p class="card-excerpt">CPI cools to 3.4% but Fed remains divided on next move as S&amp;P holds record highs</p>
       <a class="card-link" href="https://www.reuters.com/business/cooler-inflation-data-may-force-warshs-divided-fed-hold-line-rates-2026-08-14/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
-    </article></div></section><section id="ai_agents"><h2 class="section-title">🤖 AI / Agents</h2><div class="section-grid">
+    </article></div></section><section id="ai_agents"><h2 class="section-title"><span class="section-num" aria-hidden="true">—</span> 🤖 AI / Agents</h2><div class="cards">
     <article class="card">
       <div class="card-meta">TechCrunch · 2026-08-09 · Agents · Aug 14</div>
       <h3 class="card-title"><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">Claude Code 默认启用自动模式，权限改为 opt-out</a></h3>
       <div class="card-en">Claude Code auto mode enabled by default — permissions now opt-out</div>
       <p class="card-summary">与 Today&#x27;s 3 同源的深度解读。Anthropic 将 coding agent 的执行模式从需人工确认改为默认自主，意味着 agent 可在一次指令下完成多步工具链。</p>
-      <div class="card-why"><span>为什么重要</span>你的 harness 设计必须回答：何时让人介入、何时让 agent 自主、如何兜底。默认 auto 会放大设计缺陷。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Claude Code is shifting auto mode to default, making permissions opt-out rather than opt-in</blockquote>
+      <p class="card-why">— 你的 harness 设计必须回答：何时让人介入、何时让 agent 自主、如何兜底。默认 auto 会放大设计缺陷。</p>
+      <p class="card-excerpt">Claude Code is shifting auto mode to default, making permissions opt-out rather than opt-in</p>
       <a class="card-link" href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -98,8 +97,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://cursor.com/blog" target="_blank" rel="noopener noreferrer">Cursor 推出团队路由、AIUC-1 认证与提速 3 倍的 Cloud Agents</a></h3>
       <div class="card-en">Cursor ships Router for Teams + AIUC-1 cert + 3x faster Cloud Agents</div>
       <p class="card-summary">Cursor 本周发布 Router for Teams（智能模型路由）、AIUC-1 安全认证，以及速度提升 3 倍的 Cloud Agents，用于远程异步代码任务。</p>
-      <div class="card-why"><span>为什么重要</span>Model routing 与可信部署是 Production agent 的两大成本与合规抓手，Cursor 正在把它们产品化。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Cursor ships Router for Teams, AIUC-1 certification, and 3x faster Cloud Agents</blockquote>
+      <p class="card-why">— Model routing 与可信部署是 Production agent 的两大成本与合规抓手，Cursor 正在把它们产品化。</p>
+      <p class="card-excerpt">Cursor ships Router for Teams, AIUC-1 certification, and 3x faster Cloud Agents</p>
       <a class="card-link" href="https://cursor.com/blog" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -107,8 +106,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/" target="_blank" rel="noopener noreferrer">Google 为 Gemini 接入更多应用，8 月能力版图再扩张</a></h3>
       <div class="card-en">Google connects more apps to Gemini — August 2026 expansion</div>
       <p class="card-summary">Google 在 8 月为 Gemini 扩展了更多一/三方应用连接，包括 Workspace、Maps 等，目标是让 Gemini 成为跨应用的 agent 入口。</p>
-      <div class="card-why"><span>为什么重要</span>MCP/Connectors 的落地战场：谁能把工具生态接得又多又稳，谁就有 agent 分发的优势。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Google is connecting more apps to Gemini as part of its August 2026 expansion</blockquote>
+      <p class="card-why">— MCP/Connectors 的落地战场：谁能把工具生态接得又多又稳，谁就有 agent 分发的优势。</p>
+      <p class="card-excerpt">Google is connecting more apps to Gemini as part of its August 2026 expansion</p>
       <a class="card-link" href="https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -116,8 +115,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener noreferrer">OpenAI 发布 GPT-5.6：以一半 token 成本刷新 Coding Agent 榜首，并原生支持多 Agent 编排</a></h3>
       <div class="card-en">OpenAI GPT-5.6 — Coding Agent Index SOTA with half the tokens + orchestration</div>
       <p class="card-summary">8 月 13 日 OpenAI 发布 GPT-5.6，在 Artificial Analysis Coding Agent Index 上以 80 分（+2.8）刷新 SOTA，且输出 token 减半。Responses API 新增推理连续性、多 Agent 编排等原语。</p>
-      <div class="card-why"><span>为什么重要</span>平台层开始提供编排原语，你的 harness 需要的代码会变少，但对平台能力的理解要求变高。</div>
-      <blockquote class="card-excerpt"><span>原文</span>GPT-5.6 sets a new SOTA on the Coding Agent Index at 80, using less than half the output tokens</blockquote>
+      <p class="card-why">— 平台层开始提供编排原语，你的 harness 需要的代码会变少，但对平台能力的理解要求变高。</p>
+      <p class="card-excerpt">GPT-5.6 sets a new SOTA on the Coding Agent Index at 80, using less than half the output tokens</p>
       <a class="card-link" href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -125,8 +124,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.digitaltrends.com/computing/google-drops-gemini-3-7-flash-model-and-its-ready-to-handle-your-chores-with-the-spark-agent/" target="_blank" rel="noopener noreferrer">Google 发布 Gemini 3.7 Flash，价格减半并率先驱动 Spark Agent</a></h3>
       <div class="card-en">Google Gemini 3.7 Flash — half the price of 3.6, powering Spark agent</div>
       <p class="card-summary">8 月 14–15 日 Google 推出 Gemini 3.7 Flash，价格约为 3.6 的一半，首个落地场景即是云端 Spark agent，在 AutomationBench 上 tool use 与多步任务显著提升。</p>
-      <div class="card-why"><span>为什么重要</span>Agentic 模型正朝更快更便宜的 inference 方向优化，这是 model routing 的实战依据。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Gemini 3.7 Flash lands at half the price of 3.6, now powering the Spark agent with stronger tool use</blockquote>
+      <p class="card-why">— Agentic 模型正朝更快更便宜的 inference 方向优化，这是 model routing 的实战依据。</p>
+      <p class="card-excerpt">Gemini 3.7 Flash lands at half the price of 3.6, now powering the Spark agent with stronger tool use</p>
       <a class="card-link" href="https://www.digitaltrends.com/computing/google-drops-gemini-3-7-flash-model-and-its-ready-to-handle-your-chores-with-the-spark-agent/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -134,8 +133,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" target="_blank" rel="noopener noreferrer">Amazon Nova Act 正式 GA：面向生产工作流的托管式 browser-use</a></h3>
       <div class="card-en">Amazon Nova Act GA — managed browser-use for production workflows</div>
       <p class="card-summary">AWS 正式发布 Nova Act，用于自动化浏览器任务（表单、搜索抽取、预订、QA），提供生产级可靠性控制。</p>
-      <div class="card-why"><span>为什么重要</span>Computer use 从 demo 进入托管服务时代，直接对应你清单里的 reliability / observability 主题。</div>
-      <blockquote class="card-excerpt"><span>原文</span>AWS GA&#x27;d Nova Act for reliable agents that automate browser-based workflows</blockquote>
+      <p class="card-why">— Computer use 从 demo 进入托管服务时代，直接对应你清单里的 reliability / observability 主题。</p>
+      <p class="card-excerpt">AWS GA&#x27;d Nova Act for reliable agents that automate browser-based workflows</p>
       <a class="card-link" href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -143,17 +142,17 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://thenewstack.io/memory-for-ai-agents-a-new-paradigm-of-context-engineering/" target="_blank" rel="noopener noreferrer">记忆即上下文工程：Agent 的新范式</a></h3>
       <div class="card-en">Memory as context engineering — the new agent paradigm</div>
       <p class="card-summary">The New Stack 长文将 agent memory 重新定义为 context engineering——不是简单追加历史，而是对 working / long-term / procedural memory 的编排与注入策略。</p>
-      <div class="card-why"><span>为什么重要</span>对应你的第 6–8 个学习主题：窗口大小不再是瓶颈，‘放什么、何时放’才是。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Memory for AI agents is reframed as context engineering — curating what enters the window and when</blockquote>
+      <p class="card-why">— 对应你的第 6–8 个学习主题：窗口大小不再是瓶颈，‘放什么、何时放’才是。</p>
+      <p class="card-excerpt">Memory for AI agents is reframed as context engineering — curating what enters the window and when</p>
       <a class="card-link" href="https://thenewstack.io/memory-for-ai-agents-a-new-paradigm-of-context-engineering/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
-    </article></div></section><section id="ai_infra"><h2 class="section-title">⚙️ AI Infra</h2><div class="section-grid">
+    </article></div></section><section id="ai_infra"><h2 class="section-title"><span class="section-num" aria-hidden="true">—</span> ⚙️ AI Infra</h2><div class="cards">
     <article class="card">
       <div class="card-meta">NVIDIA Developer Blog · 2026-08-14 · KV cache · NVFP4</div>
       <h3 class="card-title"><a href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">NVIDIA 发布 NVFP4 KV cache：面向长上下文大批量的推理优化</a></h3>
       <div class="card-en">NVIDIA: NVFP4 KV cache for long-context, large-batch inference</div>
       <p class="card-summary">NVIDIA 详解 NVFP4 量化的 KV cache，在保持精度的同时显著降低显存占用、提升吞吐，专为需要保留长历史的 agentic 工作负载设计。</p>
-      <div class="card-why"><span>为什么重要</span>KV cache 是 agent 的隐藏成本，量化它是扩展长程任务最便宜的路径之一。</div>
-      <blockquote class="card-excerpt"><span>原文</span>NVFP4-quantized KV cache lowers memory footprint for long-context, large-batch inference</blockquote>
+      <p class="card-why">— KV cache 是 agent 的隐藏成本，量化它是扩展长程任务最便宜的路径之一。</p>
+      <p class="card-excerpt">NVFP4-quantized KV cache lowers memory footprint for long-context, large-batch inference</p>
       <a class="card-link" href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -161,8 +160,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.reuters.com/business/amd-forecasts-upbeat-revenue-ai-data-center-demand-beats-quarterly-estimates-2026-08-04/" target="_blank" rel="noopener noreferrer">AMD 二季度营收创纪录 115 亿美元，数据中心销售翻倍</a></h3>
       <div class="card-en">AMD posts record $11.5B Q2 — datacenter sales double</div>
       <p class="card-summary">AMD 发布 Q2 财报，营收 115 亿美元创纪录，数据中心业务同比翻倍，受 AI 加速器与 EPYC 需求驱动。</p>
-      <div class="card-why"><span>为什么重要</span>AI infra 不只是 NVIDIA 单点叙事，AMD 的数据验证了 datacenter 需求的广度。</div>
-      <blockquote class="card-excerpt"><span>原文</span>AMD posts record $11.5B Q2 revenue as datacenter sales double</blockquote>
+      <p class="card-why">— AI infra 不只是 NVIDIA 单点叙事，AMD 的数据验证了 datacenter 需求的广度。</p>
+      <p class="card-excerpt">AMD posts record $11.5B Q2 revenue as datacenter sales double</p>
       <a class="card-link" href="https://www.reuters.com/business/amd-forecasts-upbeat-revenue-ai-data-center-demand-beats-quarterly-estimates-2026-08-04/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -170,8 +169,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-august-2026" target="_blank" rel="noopener noreferrer">新一轮数据中心建设潮：2026 年 8 月施工追踪</a></h3>
       <div class="card-en">New datacenter builds — August 2026 construction tracker</div>
       <p class="card-summary">行业追踪显示 8 月多地新 datacenter 开建或扩容，电力与网络成为比 GPU 更早的瓶颈。</p>
-      <div class="card-why"><span>为什么重要</span>Infra 瓶颈正从芯片供给转向 power / networking，理解这一点才能读懂 AI capex 的后续。</div>
-      <blockquote class="card-excerpt"><span>原文</span>New datacenter builds surge in August as power and networking emerge as bottlenecks</blockquote>
+      <p class="card-why">— Infra 瓶颈正从芯片供给转向 power / networking，理解这一点才能读懂 AI capex 的后续。</p>
+      <p class="card-excerpt">New datacenter builds surge in August as power and networking emerge as bottlenecks</p>
       <a class="card-link" href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-august-2026" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -179,8 +178,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://gpuinsights.net/ai-data-center-power-infrastructure-2026/" target="_blank" rel="noopener noreferrer">AI 数据中心电力专题：GPU 集群与 2026 基础设施栈</a></h3>
       <div class="card-en">AI datacenter power — GPU clusters and the 2026 infrastructure stack</div>
       <p class="card-summary">专题梳理 2026 年 GPU 集群的电力、散热与组网挑战，以及从芯片到设施的全栈应对。</p>
-      <div class="card-why"><span>为什么重要</span>把 infra 理解从单卡性能拉回到系统级约束，符合你 Production infra 的学习目标。</div>
-      <blockquote class="card-excerpt"><span>原文</span>GPU clusters face power, cooling and networking constraints across the 2026 infra stack</blockquote>
+      <p class="card-why">— 把 infra 理解从单卡性能拉回到系统级约束，符合你 Production infra 的学习目标。</p>
+      <p class="card-excerpt">GPU clusters face power, cooling and networking constraints across the 2026 infra stack</p>
       <a class="card-link" href="https://gpuinsights.net/ai-data-center-power-infrastructure-2026/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -188,17 +187,17 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.mirantis.com/blog/best-infrastructure-for-scalable-ai-inference/" target="_blank" rel="noopener noreferrer">可扩展 AI 推理的最佳实践：batching、routing 与 autoscaling</a></h3>
       <div class="card-en">Best patterns for scalable AI inference — batching, routing, autoscaling</div>
       <p class="card-summary">Mirantis 综述在波动的 agent 流量下保持延迟可控的推理栈模式：动态 batching、智能路由与弹性扩缩容。</p>
-      <div class="card-why"><span>为什么重要</span>为你的 production deployment 与 latency/throughput 认知打底。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Scalable inference requires new batching, routing and autoscaling patterns for bursty agent workloads</blockquote>
+      <p class="card-why">— 为你的 production deployment 与 latency/throughput 认知打底。</p>
+      <p class="card-excerpt">Scalable inference requires new batching, routing and autoscaling patterns for bursty agent workloads</p>
       <a class="card-link" href="https://www.mirantis.com/blog/best-infrastructure-for-scalable-ai-inference/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
-    </article></div></section><section id="products"><h2 class="section-title">🚀 Products / Startups / Open Source</h2><div class="section-grid">
+    </article></div></section><section id="products"><h2 class="section-title"><span class="section-num" aria-hidden="true">—</span> 🚀 Products / Startups / Open Source</h2><div class="cards">
     <article class="card">
       <div class="card-meta">CNBC / Meta · 2026-08-10 · Open-weight · Aug 10</div>
       <h3 class="card-title"><a href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html" target="_blank" rel="noopener noreferrer">Meta 宣布 Muse Glimmer 与 Muse Spark 1.2 将开源权重</a></h3>
       <div class="card-en">Meta Muse Glimmer + Muse Spark 1.2 to go open-weight</div>
       <p class="card-summary">8 月 10 日 Meta 发布面向 agentic 任务的小模型 Muse Glimmer（单卡可跑），并确认 Muse Spark 1.2 将开源权重，Zuckerberg 称之为美国 open AI 领导力举措。</p>
-      <div class="card-why"><span>为什么重要</span>边缘可部署的 agentic 模型挑战 API-only 的成本结构，是做 Production-grade AI 的重要参照。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Meta launched Muse Glimmer and plans to open-source Muse Spark 1.2 weights</blockquote>
+      <p class="card-why">— 边缘可部署的 agentic 模型挑战 API-only 的成本结构，是做 Production-grade AI 的重要参照。</p>
+      <p class="card-excerpt">Meta launched Muse Glimmer and plans to open-source Muse Spark 1.2 weights</p>
       <a class="card-link" href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -206,8 +205,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/" target="_blank" rel="noopener noreferrer">Naïve 获 2850 万美元融资，自动化公司设立与运营</a></h3>
       <div class="card-en">Naïve raises $28.5M to automate company setup and ops</div>
       <p class="card-summary">Startup Naïve 宣布 2850 万美元融资，用 AI agent 自动化公司注册、合规与日常运营流程。</p>
-      <div class="card-why"><span>为什么重要</span>垂直 agent 用窄切口拿首笔收入的典型案例，值得你的小游戏/Business 思路参考。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Naïve raises $28.5M to automate company setup and operations with AI agents</blockquote>
+      <p class="card-why">— 垂直 agent 用窄切口拿首笔收入的典型案例，值得你的小游戏/Business 思路参考。</p>
+      <p class="card-excerpt">Naïve raises $28.5M to automate company setup and operations with AI agents</p>
       <a class="card-link" href="https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -215,8 +214,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://pasqualepillitteri.it/en/news/1476/10-open-source-ai-agent-frameworks-2026" target="_blank" rel="noopener noreferrer">2026 年值得关注的 10 个开源 AI Agent 框架</a></h3>
       <div class="card-en">10 open-source AI agent frameworks to watch in 2026</div>
       <p class="card-summary">盘点含 LangGraph、CrewAI、AutoGen 在内的 10 个框架，对比语言、托管与功能取舍，适合作为首个 POC 的选型短名单。</p>
-      <div class="card-why"><span>为什么重要</span>广度优先的框架地图，无需过早锁定单一生态。</div>
-      <blockquote class="card-excerpt"><span>原文</span>10 open-source AI agent frameworks compared by language, hosting and features</blockquote>
+      <p class="card-why">— 广度优先的框架地图，无需过早锁定单一生态。</p>
+      <p class="card-excerpt">10 open-source AI agent frameworks compared by language, hosting and features</p>
       <a class="card-link" href="https://pasqualepillitteri.it/en/news/1476/10-open-source-ai-agent-frameworks-2026" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -224,8 +223,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://ossinsight.io/trending/ai" target="_blank" rel="noopener noreferrer">GitHub AI 热门仓库：每日可扫的实时榜单</a></h3>
       <div class="card-en">Trending AI repos — live OSS rankings to scan daily</div>
       <p class="card-summary">OSSInsight 实时榜单聚合当前最热 AI 仓库，常比新闻更快暴露新型工具与 demo。</p>
-      <div class="card-why"><span>为什么重要</span>养成 2 分钟日扫习惯，为 idea 生成提供早期信号。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Live ranking of trending AI repos surfaces tools before press coverage</blockquote>
+      <p class="card-why">— 养成 2 分钟日扫习惯，为 idea 生成提供早期信号。</p>
+      <p class="card-excerpt">Live ranking of trending AI repos surfaces tools before press coverage</p>
       <a class="card-link" href="https://ossinsight.io/trending/ai" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -233,17 +232,17 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://github.com/vercel/ai/releases" target="_blank" rel="noopener noreferrer">Vercel AI SDK 八月更新：增强 OpenAI 兼容提供商支持</a></h3>
       <div class="card-en">Vercel AI SDK — August 2026 patches for OpenAI-compatible providers</div>
       <p class="card-summary">Vercel AI SDK 在 8 月发布多项补丁，完善对 OpenAI-compatible provider（包括自定义 endpoint）的支持。</p>
-      <div class="card-why"><span>为什么重要</span>与你的自定义 Muse endpoint 相关：生态对 open-compatible 的适配正在加速。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Vercel AI SDK patches improve OpenAI-compatible provider support</blockquote>
+      <p class="card-why">— 与你的自定义 Muse endpoint 相关：生态对 open-compatible 的适配正在加速。</p>
+      <p class="card-excerpt">Vercel AI SDK patches improve OpenAI-compatible provider support</p>
       <a class="card-link" href="https://github.com/vercel/ai/releases" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
-    </article></div></section><section id="markets"><h2 class="section-title">💰 Markets / Finance</h2><div class="section-grid">
+    </article></div></section><section id="markets"><h2 class="section-title"><span class="section-num" aria-hidden="true">—</span> 💰 Markets / Finance</h2><div class="cards">
     <article class="card">
       <div class="card-meta">Intellectia · 2026-08-14 · S&amp;P · record</div>
       <h3 class="card-title"><a href="https://intellectia.ai/blog/sp500-record-high-august-14-2026" target="_blank" rel="noopener noreferrer">标普 7814 点再创新高：这轮历史性反弹靠什么驱动</a></h3>
       <div class="card-en">S&amp;P at record 7,814 — what&#x27;s driving the historic rally</div>
       <p class="card-summary">8 月 14 日标普 500 收于 7814.88 创新高，三大驱动：通胀降温（CPI 约 3.4%）、AI 相关盈利强劲、降息预期升温。</p>
-      <div class="card-why"><span>为什么重要</span>金融概念：CPI → 降息预期 → 贴现率 → 科技股估值 的传导链在此轮行情中清晰可见。</div>
-      <blockquote class="card-excerpt"><span>原文</span>S&amp;P 500 hits 7814 on cooling inflation, AI earnings and rising rate-cut odds</blockquote>
+      <p class="card-why">— 金融概念：CPI → 降息预期 → 贴现率 → 科技股估值 的传导链在此轮行情中清晰可见。</p>
+      <p class="card-excerpt">S&amp;P 500 hits 7814 on cooling inflation, AI earnings and rising rate-cut odds</p>
       <a class="card-link" href="https://intellectia.ai/blog/sp500-record-high-august-14-2026" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -251,8 +250,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.businessinsider.com/big-tech-spending-capex-earnings-season-memory-prices-ai-2026-7" target="_blank" rel="noopener noreferrer">Big Tech 资本开支气球：2026 年有望冲向 7250 亿美元</a></h3>
       <div class="card-en">Big Tech capex balloon — on track for $725B in 2026</div>
       <p class="card-summary">分析称 2026 年 hyperscaler capex 可能具防御性——为保份额不得不投，内存、GPU 与数据中心推高支出，全年或达 7250 亿美元。</p>
-      <div class="card-why"><span>为什么重要</span>金融概念：CapEx vs FCF——营收增长时自由现金流仍可能因 capex 承压，需看 FCF 转化率。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Big Tech capex on track for $725B as AI build-out becomes table stakes</blockquote>
+      <p class="card-why">— 金融概念：CapEx vs FCF——营收增长时自由现金流仍可能因 capex 承压，需看 FCF 转化率。</p>
+      <p class="card-excerpt">Big Tech capex on track for $725B as AI build-out becomes table stakes</p>
       <a class="card-link" href="https://www.businessinsider.com/big-tech-spending-capex-earnings-season-memory-prices-ai-2026-7" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -260,8 +259,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://intellectia.ai/blog/nvidia-earnings-preview-august-2026" target="_blank" rel="noopener noreferrer">英伟达 Q2 前瞻（8 月 26 日）：下一个 AI infra 催化剂</a></h3>
       <div class="card-en">Nvidia Q2 preview Aug 26 — the next AI-infra catalyst</div>
       <p class="card-summary">英伟达将于 8 月 26 日发布 FY27 Q2，华尔街关注 datacenter 收入与 Blackwell 爬坡指引，将定调半导体情绪。</p>
-      <div class="card-why"><span>为什么重要</span>关注 datacenter 营收、毛利率与 Blackwell 供给表述，对 META/MSFT/GOOGL capex 有外溢。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Nvidia reports Q2 FY27 on Aug 26, the pivotal print for the AI-infra trade</blockquote>
+      <p class="card-why">— 关注 datacenter 营收、毛利率与 Blackwell 供给表述，对 META/MSFT/GOOGL capex 有外溢。</p>
+      <p class="card-excerpt">Nvidia reports Q2 FY27 on Aug 26, the pivotal print for the AI-infra trade</p>
       <a class="card-link" href="https://intellectia.ai/blog/nvidia-earnings-preview-august-2026" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -269,17 +268,17 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting" target="_blank" rel="noopener noreferrer">克利夫兰联储通胀 Nowcasting：实时 CPI 信号</a></h3>
       <div class="card-en">Cleveland Fed inflation nowcasting — real-time CPI signal</div>
       <p class="card-summary">克利夫兰联储的 nowcasting 模型提供对 CPI 的近实时估算，帮助在官方数据前预判通胀路径与联储动向。</p>
-      <div class="card-why"><span>为什么重要</span>实用工具：比等 CPI 公布更快建立对利率与市场定价的体感。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Cleveland Fed nowcasting offers near-real-time CPI estimates ahead of official prints</blockquote>
+      <p class="card-why">— 实用工具：比等 CPI 公布更快建立对利率与市场定价的体感。</p>
+      <p class="card-excerpt">Cleveland Fed nowcasting offers near-real-time CPI estimates ahead of official prints</p>
       <a class="card-link" href="https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
-    </article></div></section><section id="world"><h2 class="section-title">🌎 World / US</h2><div class="section-grid">
+    </article></div></section><section id="world"><h2 class="section-title"><span class="section-num" aria-hidden="true">—</span> 🌎 World / US</h2><div class="cards">
     <article class="card">
       <div class="card-meta">Reuters · 2026-08-14 · Exclusive · Aug 14</div>
       <h3 class="card-title"><a href="https://www.reuters.com/world/china/us-tell-partners-they-must-pick-sides-ai-race-with-china-2026-08-14/" target="_blank" rel="noopener noreferrer">美国将要求伙伴在中美 AI 竞赛中选边站</a></h3>
       <div class="card-en">US to tell partners they must pick sides in AI race with China</div>
       <p class="card-summary">路透称美国计划告知盟友与伙伴，需在 AI 竞赛中明确选边，涉及芯片出口与供应链合作。</p>
-      <div class="card-why"><span>为什么重要</span>对科技供应链与 infra 供给有实质影响，可能重塑芯片与算力流向。</div>
-      <blockquote class="card-excerpt"><span>原文</span>US to tell partners they must pick sides in the AI race with China</blockquote>
+      <p class="card-why">— 对科技供应链与 infra 供给有实质影响，可能重塑芯片与算力流向。</p>
+      <p class="card-excerpt">US to tell partners they must pick sides in the AI race with China</p>
       <a class="card-link" href="https://www.reuters.com/world/china/us-tell-partners-they-must-pick-sides-ai-race-with-china-2026-08-14/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -287,8 +286,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.reuters.com/business/cooler-inflation-data-may-force-warshs-divided-fed-hold-line-rates-2026-08-14/" target="_blank" rel="noopener noreferrer">美联储内部分歧：温和 CPI 或指向按兵不动而非降息</a></h3>
       <div class="card-en">Fed divided: benign CPI may force a hold, not a cut — Reuters</div>
       <p class="card-summary">路透解读称尽管 CPI 温和，美联储内部仍分歧，按兵不动的概率不低于降息，需关注官员表态。</p>
-      <div class="card-why"><span>为什么重要</span>市场定价在 hold vs cut 间摇摆时，科技股对利率最敏感。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Fed divided as benign CPI may force a hold rather than a cut</blockquote>
+      <p class="card-why">— 市场定价在 hold vs cut 间摇摆时，科技股对利率最敏感。</p>
+      <p class="card-excerpt">Fed divided as benign CPI may force a hold rather than a cut</p>
       <a class="card-link" href="https://www.reuters.com/business/cooler-inflation-data-may-force-warshs-divided-fed-hold-line-rates-2026-08-14/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -296,17 +295,17 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/" target="_blank" rel="noopener noreferrer">白宫国家 AI 政策框架：寻求统一联邦路径</a></h3>
       <div class="card-en">White House national AI policy framework — bid for unified federal approach</div>
       <p class="card-summary">白宫推出非约束性框架，建议以统一联邦立法取代各州分散监管，降低 AI 产品跨州合规复杂度。</p>
-      <div class="card-why"><span>为什么重要</span>若落地，将直接影响你在美国发布 AI 产品的合规与部署清单。</div>
-      <blockquote class="card-excerpt"><span>原文</span>White House framework outlines nonbinding recommendations for unified federal AI regulation</blockquote>
+      <p class="card-why">— 若落地，将直接影响你在美国发布 AI 产品的合规与部署清单。</p>
+      <p class="card-excerpt">White House framework outlines nonbinding recommendations for unified federal AI regulation</p>
       <a class="card-link" href="https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
-    </article></div></section><section id="for_you"><h2 class="section-title">🎯 For You</h2><div class="section-grid">
+    </article></div></section><section id="for_you"><h2 class="section-title"><span class="section-num" aria-hidden="true">—</span> 🎯 For You</h2><div class="cards">
     <article class="card">
       <div class="card-meta">For You · 2026-08-14</div>
       <h3 class="card-title"><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">若自动模式让你不安：先设计你的 harness 再开启自主</a></h3>
       <div class="card-en">Read this if auto mode scares you — design your harness before enabling autonomy</div>
       <p class="card-summary">单一推荐：读透 Claude Code auto 切换一文，明确何时让人介入、何时让 agent 自主，以及如何设计权限与回滚。</p>
-      <div class="card-why"><span>为什么重要</span>把 autonomy 当作设计问题而非开关，是 harness 成熟度的分水岭。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Design your harness before enabling autonomy — decide when to intervene and how to roll back</blockquote>
+      <p class="card-why">— 把 autonomy 当作设计问题而非开关，是 harness 成熟度的分水岭。</p>
+      <p class="card-excerpt">Design your harness before enabling autonomy — decide when to intervene and how to roll back</p>
       <a class="card-link" href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -314,8 +313,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">收藏：把 NVFP4 KV cache 当作长上下文成本速查表</a></h3>
       <div class="card-en">Save — NVFP4 KV cache as your long-context cost cheat sheet</div>
       <p class="card-summary">收藏 NVIDIA NVFP4 一文，作为你设计 agent 记忆/窗口策略时的成本参照。</p>
-      <div class="card-why"><span>为什么重要</span>它同时连接了上下文工程与成本/延迟两个主题。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Save the NVFP4 KV cache post as your reference for long-context cost</blockquote>
+      <p class="card-why">— 它同时连接了上下文工程与成本/延迟两个主题。</p>
+      <p class="card-excerpt">Save the NVFP4 KV cache post as your reference for long-context cost</p>
       <a class="card-link" href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article>
     <article class="card">
@@ -323,8 +322,8 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h3 class="card-title"><a href="https://www.forbes.com/sites/antoniopequenoiv/2026/08/11/gemini-becomes-googles-fastest-growing-product-ever-after-hitting-1-billion-monthly-users/" target="_blank" rel="noopener noreferrer">分发大于模型：Gemini 10 亿用户对产品思维的启示</a></h3>
       <div class="card-en">Distribution &gt; model — what Gemini at 1B users teaches your product thinking</div>
       <p class="card-summary">Gemini 靠与 Search/Android/Workspace 的集成实现分发超越，提示 AI 产品的增长杠杆在 distribution 而非仅模型能力。</p>
-      <div class="card-why"><span>为什么重要</span>对你规划 small-game/AI 产品的 roadmap 有直接启发：便宜的 router 模型 + 强分发。</div>
-      <blockquote class="card-excerpt"><span>原文</span>Gemini at 1B users signals distribution as the growth lever beyond model capability</blockquote>
+      <p class="card-why">— 对你规划 small-game/AI 产品的 roadmap 有直接启发：便宜的 router 模型 + 强分发。</p>
+      <p class="card-excerpt">Gemini at 1B users signals distribution as the growth lever beyond model capability</p>
       <a class="card-link" href="https://www.forbes.com/sites/antoniopequenoiv/2026/08/11/gemini-becomes-googles-fastest-growing-product-ever-after-hitting-1-billion-monthly-users/" target="_blank" rel="noopener noreferrer">阅读原文 →</a>
     </article></div></section>
 <footer>由 Hermes 生成 · 2026-08-16T00:20:56.844516+00:00 · <a href="/daily-news/archive/2026-08-15.html">本期归档</a></footer>
