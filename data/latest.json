@@ -1,6 +1,6 @@
 {
   "date": "2026-08-16",
-  "generated_at": "2026-08-16T08:00:00.000000+00:00",
+  "generated_at": "2026-08-16T00:16:36.918895+00:00",
   "signal": "The Aug 11-15 cluster shows a single throughline: AI is scaling by distribution, not just size — Gemini at 1B users via product integration, Muse Glimmer via single-GPU edge, Nova Act via managed browser automation, and Claude/Cursor via auto-mode agents on your own infra. The scarce resource is no longer model IQ but reliable deployment at scale, which is why infra (KV cache, datacenter buildout) and harness (durable state, routers) dominated the week's real releases.",
   "sections": {
     "top": [
@@ -11,7 +11,13 @@
         "badge": "1B MAU · Aug 11",
         "summary": "Google confirmed Aug 11 that the Gemini app has crossed 1 billion monthly active users, making it the fastest-growing product in Google history. Google's product blog noted expanded connected-app integrations the same week, underpinning distribution via Workspace and Android.",
         "why_it_matters": "At 1B MAU, Gemini moves from model race to distribution race — product bundling and cross-app connectivity matter more than leaderboard deltas.",
-        "why_you_care": "For your 'Products / AI-native UX' lens: observe how Google converts model wins into daily-use hooks. Distribution is the moat."
+        "why_you_care": "For your 'Products / AI-native UX' lens: observe how Google converts model wins into daily-use hooks. Distribution is the moat.",
+        "title_zh": "Gemini 月活破 10 亿，成为 Google 史上增长最快的产品",
+        "summary_zh": "8 月 11 日 Google 宣布 Gemini App 月活突破 10 亿。Sundar Pichai 称这是公司史上增长最快的产品，增速超过 Search 初期。背后是与 Search、Android、Workspace 的深度集成分发。",
+        "why_it_matters_zh": "说明 AI 规模化的新路径是 distribution（产品集成）而非单纯堆模型大小。对做 AI 产品的人，这是比参数竞赛更值得研究的增长范式。",
+        "original_excerpt": "Gemini has become Google's fastest-growing product ever, surpassing 1 billion monthly active users",
+        "category": "top",
+        "published_at": "2026-08-11"
       },
       {
         "title": "Claude Code auto mode now default — Anthropic flips the agent switch Aug 14",
@@ -20,7 +26,13 @@
         "badge": "Default since Aug 14",
         "summary": "Anthropic made Claude Code's auto mode the default for Pro, Max, and Team on Aug 14 (announced Aug 9). Agents now autonomously pick tools and run multi-step edits unless a user or admin opts out, shifting from human-approval-every-step to harness-governed autonomy.",
         "why_it_matters": "Defaults set behavior at scale: this is the largest live test of autonomous coding harness governance (permissions, sandboxing, observability) in production.",
-        "why_you_care": "Directly hits your harness/runtime stack — compare Anthropic's auto-mode guardrails to your own agent permission design."
+        "why_you_care": "Directly hits your harness/runtime stack — compare Anthropic's auto-mode guardrails to your own agent permission design.",
+        "title_zh": "Claude Code 默认开启自动模式，Anthropic 把 Agent 开关拨向自主执行",
+        "summary_zh": "Anthropic 宣布 Claude Code 的 auto mode 将于 8 月 14 日起默认开启，权限从 opt-in 改为 opt-out。Agent 可在无需逐次确认的情况下连续执行工具调用。",
+        "why_it_matters_zh": "这是 coding agent 从 human-in-the-loop 向 autonomous 的关键拐点，直接考验 harness 的权限设计与可回滚性。",
+        "original_excerpt": "Anthropic is turning Claude Code's auto mode on by default, shifting permissions to opt-out",
+        "category": "top",
+        "published_at": "2026-08-14"
       },
       {
         "title": "CPI cools to ~3.4% but Fed remains divided — S&P holds record 7,814",
@@ -29,7 +41,13 @@
         "badge": "CPI + Fed + S&P",
         "summary": "July CPI printed cool (~3.4% YoY) Aug 12, keeping the S&P near its Aug 14 record 7,814. Reuters Aug 14 noted a divided Fed is now more likely to hold rates rather than cut, as benign inflation collides with sticky services and election-adjacent politics.",
         "why_it_matters": "The market's 'cool CPI → cut' trade is stalling; hold-not-cut reprices duration and tech multiples.",
-        "why_you_care": "Finance Concept — Fed 'hold' vs 'cut': holding keeps discount rates higher, compressing long-duration growth valuations even amid AI earnings strength."
+        "why_you_care": "Finance Concept — Fed 'hold' vs 'cut': holding keeps discount rates higher, compressing long-duration growth valuations even amid AI earnings strength.",
+        "title_zh": "CPI 回落至约 3.4%，但美联储内部分歧，标普守住 7814 点纪录高位",
+        "summary_zh": "7 月 CPI 约 3.4% 略低于预期，标普 500 维持 7814 点历史高位。但美联储官员对是否降息仍存分歧，市场对 9 月降息定价摇摆。",
+        "why_it_matters_zh": "理解通胀-利率-估值的传导链，是判断 AI 相关资产定价的关键背景。",
+        "original_excerpt": "CPI cools to 3.4% but Fed remains divided on next move as S&P holds record highs",
+        "category": "top",
+        "published_at": "2026-08-14"
       }
     ],
     "ai_agents": [
@@ -40,7 +58,13 @@
         "badge": "Agents · Aug 14",
         "summary": "Starting Aug 14, Claude Code sessions for Pro/Max/Team default to auto mode, letting the agent chain tools without per-step approval. Coverage from 9to5Mac and Dealroom confirms admins can override at the org level.",
         "why_it_matters": "Flips the safety/security model from permissive-every-step to policy-based autonomy — the harness must now catch mistakes proactively.",
-        "why_you_care": "Your 'Sandboxing / permissions' topic: study how Anthropic scopes file/network access under auto mode."
+        "why_you_care": "Your 'Sandboxing / permissions' topic: study how Anthropic scopes file/network access under auto mode.",
+        "title_zh": "Claude Code 默认启用自动模式，权限改为 opt-out",
+        "summary_zh": "与 Today's 3 同源的深度解读。Anthropic 将 coding agent 的执行模式从需人工确认改为默认自主，意味着 agent 可在一次指令下完成多步工具链。",
+        "why_it_matters_zh": "你的 harness 设计必须回答：何时让人介入、何时让 agent 自主、如何兜底。默认 auto 会放大设计缺陷。",
+        "original_excerpt": "Claude Code is shifting auto mode to default, making permissions opt-out rather than opt-in",
+        "category": "ai_agents",
+        "published_at": "2026-08-09"
       },
       {
         "title": "Cursor ships Router for Teams + AIUC-1 cert + 3x faster Cloud Agents",
@@ -49,7 +73,13 @@
         "badge": "Aug 13",
         "summary": "Cursor's Aug 13 notes: Cursor Router intelligently routes each request to the best model for the task (cost/latency/quality tradeoff), Cloud Agents start 3x faster with build caching, and Cursor earned AIUC-1 certification for agent security and reliability.",
         "why_it_matters": "Model routing + verified security are the two enterprise blockers for coding agents — Cursor productized both in one drop.",
-        "why_you_care": "Compare Cursor Router vs OpenAI Responses multi-agent orchestration — two takes on 'orchestration as a platform primitive.'"
+        "why_you_care": "Compare Cursor Router vs OpenAI Responses multi-agent orchestration — two takes on 'orchestration as a platform primitive.'",
+        "title_zh": "Cursor 推出团队路由、AIUC-1 认证与提速 3 倍的 Cloud Agents",
+        "summary_zh": "Cursor 本周发布 Router for Teams（智能模型路由）、AIUC-1 安全认证，以及速度提升 3 倍的 Cloud Agents，用于远程异步代码任务。",
+        "why_it_matters_zh": "Model routing 与可信部署是 Production agent 的两大成本与合规抓手，Cursor 正在把它们产品化。",
+        "original_excerpt": "Cursor ships Router for Teams, AIUC-1 certification, and 3x faster Cloud Agents",
+        "category": "ai_agents",
+        "published_at": "2026-08-14"
       },
       {
         "title": "Google connects more apps to Gemini — August 2026 expansion",
@@ -58,7 +88,13 @@
         "badge": "Gemini · Aug 2026",
         "summary": "Google's August update expands Gemini's connected apps and services, letting the assistant act across more user data sources with new plugins and deeper Workspace ties — complementing the 1B MAU push.",
         "why_it_matters": "Agent usefulness scales with tool/MCP surface area; Google is racing to wire Gemini into the everyday app graph.",
-        "why_you_care": "Your MCP vs tool-calling question: Google's connected-apps approach is a proprietary MCP equivalent — watch the UX."
+        "why_you_care": "Your MCP vs tool-calling question: Google's connected-apps approach is a proprietary MCP equivalent — watch the UX.",
+        "title_zh": "Google 为 Gemini 接入更多应用，8 月能力版图再扩张",
+        "summary_zh": "Google 在 8 月为 Gemini 扩展了更多一/三方应用连接，包括 Workspace、Maps 等，目标是让 Gemini 成为跨应用的 agent 入口。",
+        "why_it_matters_zh": "MCP/Connectors 的落地战场：谁能把工具生态接得又多又稳，谁就有 agent 分发的优势。",
+        "original_excerpt": "Google is connecting more apps to Gemini as part of its August 2026 expansion",
+        "category": "ai_agents",
+        "published_at": "2026-08-13"
       },
       {
         "title": "OpenAI GPT-5.6 — Coding Agent Index SOTA with half the tokens + orchestration",
@@ -67,7 +103,13 @@
         "badge": "Agent SOTA",
         "summary": "Released Aug 13, GPT-5.6 tops the Coding Agent Index at 80 (+2.8) using <50% of prior tokens and adds native multi-agent orchestration and programmatic tool controls in the Responses API.",
         "why_it_matters": "OpenAI bakes orchestration into the platform, reducing DIY harness code for multi-agent workflows.",
-        "why_you_care": "Harness/runtime layer — when the model provider offers orchestration, your job shifts to policy/eval/observability."
+        "why_you_care": "Harness/runtime layer — when the model provider offers orchestration, your job shifts to policy/eval/observability.",
+        "title_zh": "OpenAI 发布 GPT-5.6：以一半 token 成本刷新 Coding Agent 榜首，并原生支持多 Agent 编排",
+        "summary_zh": "8 月 13 日 OpenAI 发布 GPT-5.6，在 Artificial Analysis Coding Agent Index 上以 80 分（+2.8）刷新 SOTA，且输出 token 减半。Responses API 新增推理连续性、多 Agent 编排等原语。",
+        "why_it_matters_zh": "平台层开始提供编排原语，你的 harness 需要的代码会变少，但对平台能力的理解要求变高。",
+        "original_excerpt": "GPT-5.6 sets a new SOTA on the Coding Agent Index at 80, using less than half the output tokens",
+        "category": "ai_agents",
+        "published_at": "2026-08-13"
       },
       {
         "title": "Google Gemini 3.7 Flash — half the price of 3.6, powering Spark agent",
@@ -76,7 +118,13 @@
         "badge": "Aug 14–15",
         "summary": "Gemini 3.7 Flash launched Aug 14–15 at ~50% the price of 3.6 and is already powering Google's Spark cloud agent with stronger tool-use and multi-step accuracy on AutomationBench.",
         "why_it_matters": "Continues the week-long trend: cheaper inference-tuned models for agent loops, not just chat quality.",
-        "why_you_care": "Cost/latency routing — your router should default chores to Flash-class models, reserving frontier for hard reasoning."
+        "why_you_care": "Cost/latency routing — your router should default chores to Flash-class models, reserving frontier for hard reasoning.",
+        "title_zh": "Google 发布 Gemini 3.7 Flash，价格减半并率先驱动 Spark Agent",
+        "summary_zh": "8 月 14–15 日 Google 推出 Gemini 3.7 Flash，价格约为 3.6 的一半，首个落地场景即是云端 Spark agent，在 AutomationBench 上 tool use 与多步任务显著提升。",
+        "why_it_matters_zh": "Agentic 模型正朝更快更便宜的 inference 方向优化，这是 model routing 的实战依据。",
+        "original_excerpt": "Gemini 3.7 Flash lands at half the price of 3.6, now powering the Spark agent with stronger tool use",
+        "category": "ai_agents",
+        "published_at": "2026-08-15"
       },
       {
         "title": "Amazon Nova Act GA — managed browser-use for production workflows",
@@ -85,7 +133,13 @@
         "badge": "Computer use GA",
         "summary": "Nova Act is now GA as a managed service for reliable browser automation — forms, search & extract, shopping/booking, QA — with observability and retry controls for production.",
         "why_it_matters": "Moves 'computer use' from demo to SLA-backed service; the browser agent finally has an ops story.",
-        "why_you_care": "For your 'Computer use / reliability' track — compare Nova Act's retry model to your own."
+        "why_you_care": "For your 'Computer use / reliability' track — compare Nova Act's retry model to your own.",
+        "title_zh": "Amazon Nova Act 正式 GA：面向生产工作流的托管式 browser-use",
+        "summary_zh": "AWS 正式发布 Nova Act，用于自动化浏览器任务（表单、搜索抽取、预订、QA），提供生产级可靠性控制。",
+        "why_it_matters_zh": "Computer use 从 demo 进入托管服务时代，直接对应你清单里的 reliability / observability 主题。",
+        "original_excerpt": "AWS GA'd Nova Act for reliable agents that automate browser-based workflows",
+        "category": "ai_agents",
+        "published_at": "2026-08-15"
       },
       {
         "title": "Memory as context engineering — the new agent paradigm",
@@ -94,7 +148,13 @@
         "badge": "Context & memory",
         "summary": "A primer arguing agent memory is not appending history but curating working, long-term, and procedural memory into the window — the core of context engineering as windows grow.",
         "why_it_matters": "As context grows, selection beats size — this reframes eval and harness design.",
-        "why_you_care": "Your threads #5–8: design a memory policy before expanding context limits."
+        "why_you_care": "Your threads #5–8: design a memory policy before expanding context limits.",
+        "title_zh": "记忆即上下文工程：Agent 的新范式",
+        "summary_zh": "The New Stack 长文将 agent memory 重新定义为 context engineering——不是简单追加历史，而是对 working / long-term / procedural memory 的编排与注入策略。",
+        "why_it_matters_zh": "对应你的第 6–8 个学习主题：窗口大小不再是瓶颈，‘放什么、何时放’才是。",
+        "original_excerpt": "Memory for AI agents is reframed as context engineering — curating what enters the window and when",
+        "category": "ai_agents",
+        "published_at": "2026-08-12"
       }
     ],
     "ai_infra": [
@@ -105,7 +165,13 @@
         "badge": "KV cache · NVFP4",
         "summary": "NVIDIA details NVFP4-quantized KV cache to sustain long-context, large-batch inference with lower memory and higher throughput without quality loss — aimed squarely at agentic workloads with long histories.",
         "why_it_matters": "KV cache quant is the cheapest lever to scale agent sessions; it changes serving economics overnight.",
-        "why_you_care": "Infra topics #5–6: keep this as your KV-cache cost reference."
+        "why_you_care": "Infra topics #5–6: keep this as your KV-cache cost reference.",
+        "title_zh": "NVIDIA 发布 NVFP4 KV cache：面向长上下文大批量的推理优化",
+        "summary_zh": "NVIDIA 详解 NVFP4 量化的 KV cache，在保持精度的同时显著降低显存占用、提升吞吐，专为需要保留长历史的 agentic 工作负载设计。",
+        "why_it_matters_zh": "KV cache 是 agent 的隐藏成本，量化它是扩展长程任务最便宜的路径之一。",
+        "original_excerpt": "NVFP4-quantized KV cache lowers memory footprint for long-context, large-batch inference",
+        "category": "ai_infra",
+        "published_at": "2026-08-14"
       },
       {
         "title": "AMD posts record $11.5B Q2 — datacenter sales double",
@@ -114,7 +180,13 @@
         "badge": "AMD · Q2 FY26",
         "summary": "AMD reported Q2 revenue of $11.5B (+50% YoY), a company record, driven by datacenter products doubling. Guidance Aug 4 was upbeat on AI demand, though the stock still faced 'not enough AI wow' scrutiny vs Nvidia.",
         "why_it_matters": "Datacenter is now the swing revenue driver for both AMD and Nvidia — confirming the capex supercycle.",
-        "why_you_care": "Watch AMD vs NVDA read-through into META/MSFT/GOOGL capex and your NVDA Aug 26 earnings preview."
+        "why_you_care": "Watch AMD vs NVDA read-through into META/MSFT/GOOGL capex and your NVDA Aug 26 earnings preview.",
+        "title_zh": "AMD 二季度营收创纪录 115 亿美元，数据中心销售翻倍",
+        "summary_zh": "AMD 发布 Q2 财报，营收 115 亿美元创纪录，数据中心业务同比翻倍，受 AI 加速器与 EPYC 需求驱动。",
+        "why_it_matters_zh": "AI infra 不只是 NVIDIA 单点叙事，AMD 的数据验证了 datacenter 需求的广度。",
+        "original_excerpt": "AMD posts record $11.5B Q2 revenue as datacenter sales double",
+        "category": "ai_infra",
+        "published_at": "2026-08-14"
       },
       {
         "title": "New datacenter builds — August 2026 construction tracker",
@@ -123,7 +195,13 @@
         "badge": "Buildout",
         "summary": "August tracker lists fresh hyperscale and colocation builds breaking ground — power and interconnection dominate the bottleneck, not just chips. Pairs with Clifford Chance's 2026 AI compute infra insights.",
         "why_it_matters": "AI infra is now a power/networking problem as much as a GPU problem.",
-        "why_you_care": "For 'Datacenter / power / networking' — where your serving latency actually lives."
+        "why_you_care": "For 'Datacenter / power / networking' — where your serving latency actually lives.",
+        "title_zh": "新一轮数据中心建设潮：2026 年 8 月施工追踪",
+        "summary_zh": "行业追踪显示 8 月多地新 datacenter 开建或扩容，电力与网络成为比 GPU 更早的瓶颈。",
+        "why_it_matters_zh": "Infra 瓶颈正从芯片供给转向 power / networking，理解这一点才能读懂 AI capex 的后续。",
+        "original_excerpt": "New datacenter builds surge in August as power and networking emerge as bottlenecks",
+        "category": "ai_infra",
+        "published_at": "2026-08-14"
       },
       {
         "title": "AI datacenter power — GPU clusters and the 2026 infrastructure stack",
@@ -132,7 +210,13 @@
         "badge": "Power & cooling",
         "summary": "Breakdown of the 2026 GPU-clusters power stack: distribution, backup, cooling, and interconnect — with case studies on how firms redesign datacenters for energy-dense AI.",
         "why_it_matters": "Training and long-context inference drive megawatt-scale design choices that ripple into cloud pricing.",
-        "why_you_care": "Links cost/latency to physics — useful mental model for production deployment tradeoffs."
+        "why_you_care": "Links cost/latency to physics — useful mental model for production deployment tradeoffs.",
+        "title_zh": "AI 数据中心电力专题：GPU 集群与 2026 基础设施栈",
+        "summary_zh": "专题梳理 2026 年 GPU 集群的电力、散热与组网挑战，以及从芯片到设施的全栈应对。",
+        "why_it_matters_zh": "把 infra 理解从单卡性能拉回到系统级约束，符合你 Production infra 的学习目标。",
+        "original_excerpt": "GPU clusters face power, cooling and networking constraints across the 2026 infra stack",
+        "category": "ai_infra",
+        "published_at": "2026-08-13"
       },
       {
         "title": "Best patterns for scalable AI inference — batching, routing, autoscaling",
@@ -141,7 +225,13 @@
         "badge": "Serving",
         "summary": "Practitioner guide to scalable inference: request batching, model routing, autoscaling, and observability for bursty agent traffic where classic serving assumptions break.",
         "why_it_matters": "Agentic traffic is spiky and tool-heavy; serving architectures need rethinking.",
-        "why_you_care": "Foundation for your 'Production deployment / latency' layer."
+        "why_you_care": "Foundation for your 'Production deployment / latency' layer.",
+        "title_zh": "可扩展 AI 推理的最佳实践：batching、routing 与 autoscaling",
+        "summary_zh": "Mirantis 综述在波动的 agent 流量下保持延迟可控的推理栈模式：动态 batching、智能路由与弹性扩缩容。",
+        "why_it_matters_zh": "为你的 production deployment 与 latency/throughput 认知打底。",
+        "original_excerpt": "Scalable inference requires new batching, routing and autoscaling patterns for bursty agent workloads",
+        "category": "ai_infra",
+        "published_at": "2026-08-13"
       }
     ],
     "products": [
@@ -152,7 +242,13 @@
         "badge": "Open-weight · Aug 10",
         "summary": "Meta launched Muse Glimmer, a compact agentic model runnable on a single GPU/Mac, and confirmed Muse Spark 1.2 will be open-sourced — framed by Zuckerberg as a US open-AI leadership play.",
         "why_it_matters": "Edge-capable agentic models challenge API-only economics and enable private/local deployments.",
-        "why_you_care": "Reference for 'good enough' agent models at 1/10th serving cost for your small-game prototypes."
+        "why_you_care": "Reference for 'good enough' agent models at 1/10th serving cost for your small-game prototypes.",
+        "title_zh": "Meta 宣布 Muse Glimmer 与 Muse Spark 1.2 将开源权重",
+        "summary_zh": "8 月 10 日 Meta 发布面向 agentic 任务的小模型 Muse Glimmer（单卡可跑），并确认 Muse Spark 1.2 将开源权重，Zuckerberg 称之为美国 open AI 领导力举措。",
+        "why_it_matters_zh": "边缘可部署的 agentic 模型挑战 API-only 的成本结构，是做 Production-grade AI 的重要参照。",
+        "original_excerpt": "Meta launched Muse Glimmer and plans to open-source Muse Spark 1.2 weights",
+        "category": "products",
+        "published_at": "2026-08-10"
       },
       {
         "title": "Naïve raises $28.5M to automate company setup and ops",
@@ -161,7 +257,13 @@
         "badge": "$28.5M · Aug 6",
         "summary": "Naïve raised $28.5M to automate incorporation, compliance, and back-office workflows with AI agents — a vertical agent play for founder ops.",
         "why_it_matters": "Vertical ops agents with clear ROI and audit trails are the current fundable wedge.",
-        "why_you_care": "Startup idea signal: boring, high-friction workflows > generic assistants for first revenue."
+        "why_you_care": "Startup idea signal: boring, high-friction workflows > generic assistants for first revenue.",
+        "title_zh": "Naïve 获 2850 万美元融资，自动化公司设立与运营",
+        "summary_zh": "Startup Naïve 宣布 2850 万美元融资，用 AI agent 自动化公司注册、合规与日常运营流程。",
+        "why_it_matters_zh": "垂直 agent 用窄切口拿首笔收入的典型案例，值得你的小游戏/Business 思路参考。",
+        "original_excerpt": "Naïve raises $28.5M to automate company setup and operations with AI agents",
+        "category": "products",
+        "published_at": "2026-08-14"
       },
       {
         "title": "10 open-source AI agent frameworks to watch in 2026",
@@ -170,7 +272,13 @@
         "badge": "OSS · frameworks",
         "summary": "Curated comparison of 10 OSS agent frameworks (LangGraph, CrewAI, AutoGen and more) across language, hosting, and capabilities — useful shortlist for your first POC.",
         "why_it_matters": "Breadth-first map for Discovery Mode without premature commitment.",
-        "why_you_care": "Quick picker for your next agent harness experiment."
+        "why_you_care": "Quick picker for your next agent harness experiment.",
+        "title_zh": "2026 年值得关注的 10 个开源 AI Agent 框架",
+        "summary_zh": "盘点含 LangGraph、CrewAI、AutoGen 在内的 10 个框架，对比语言、托管与功能取舍，适合作为首个 POC 的选型短名单。",
+        "why_it_matters_zh": "广度优先的框架地图，无需过早锁定单一生态。",
+        "original_excerpt": "10 open-source AI agent frameworks compared by language, hosting and features",
+        "category": "products",
+        "published_at": "2026-08-12"
       },
       {
         "title": "Trending AI repos — live OSS rankings to scan daily",
@@ -179,7 +287,13 @@
         "badge": "OSS discovery",
         "summary": "Real-time ranking of trending AI repos — surfaces novel agent demos, MCP servers, and infra utilities before press coverage.",
         "why_it_matters": "Early signal for the next framework or tool you will actually import.",
-        "why_you_care": "2-min daily scan habit for idea generation."
+        "why_you_care": "2-min daily scan habit for idea generation.",
+        "title_zh": "GitHub AI 热门仓库：每日可扫的实时榜单",
+        "summary_zh": "OSSInsight 实时榜单聚合当前最热 AI 仓库，常比新闻更快暴露新型工具与 demo。",
+        "why_it_matters_zh": "养成 2 分钟日扫习惯，为 idea 生成提供早期信号。",
+        "original_excerpt": "Live ranking of trending AI repos surfaces tools before press coverage",
+        "category": "products",
+        "published_at": "2026-08-15"
       },
       {
         "title": "Vercel AI SDK — August 2026 patches for OpenAI-compatible providers",
@@ -188,7 +302,13 @@
         "badge": "Dev tools",
         "summary": "The AI SDK (TypeScript) issued August patches updating OpenAI-compatible and other provider dependencies — the toolkit for building AI apps with Next.js / Svelte / Node.",
         "why_it_matters": "Keeps the leading web AI toolkit in sync with fast-moving provider APIs.",
-        "why_you_care": "If you ship an AI product on Next.js, this is your agent UI glue."
+        "why_you_care": "If you ship an AI product on Next.js, this is your agent UI glue.",
+        "title_zh": "Vercel AI SDK 八月更新：增强 OpenAI 兼容提供商支持",
+        "summary_zh": "Vercel AI SDK 在 8 月发布多项补丁，完善对 OpenAI-compatible provider（包括自定义 endpoint）的支持。",
+        "why_it_matters_zh": "与你的自定义 Muse endpoint 相关：生态对 open-compatible 的适配正在加速。",
+        "original_excerpt": "Vercel AI SDK patches improve OpenAI-compatible provider support",
+        "category": "products",
+        "published_at": "2026-08-14"
       }
     ],
     "markets": [
@@ -199,7 +319,13 @@
         "badge": "S&P · record",
         "summary": "The S&P closed at 7,814.88 Aug 14 on cool CPI (~3.4% YoY) and AI earnings strength; Intellectia's explainer links rate-cut odds and AI capex to sustained multiple expansion.",
         "why_it_matters": "The 'cooler inflation + AI spend' flywheel is still powering equities.",
-        "why_you_care": "Finance Concept — Multiples: falling rate expectations lower discount rates, raising present value of long-duration tech cash flows."
+        "why_you_care": "Finance Concept — Multiples: falling rate expectations lower discount rates, raising present value of long-duration tech cash flows.",
+        "title_zh": "标普 7814 点再创新高：这轮历史性反弹靠什么驱动",
+        "summary_zh": "8 月 14 日标普 500 收于 7814.88 创新高，三大驱动：通胀降温（CPI 约 3.4%）、AI 相关盈利强劲、降息预期升温。",
+        "why_it_matters_zh": "金融概念：CPI → 降息预期 → 贴现率 → 科技股估值 的传导链在此轮行情中清晰可见。",
+        "original_excerpt": "S&P 500 hits 7814 on cooling inflation, AI earnings and rising rate-cut odds",
+        "category": "markets",
+        "published_at": "2026-08-14"
       },
       {
         "title": "Big Tech capex balloon — on track for $725B in 2026",
@@ -208,7 +334,13 @@
         "badge": "CapEx watch",
         "summary": "Big Tech's 2026 capex is ballooning toward ~$725B, driven by GPUs, memory prices, and datacenter buildout. Analysis warns much of it may be defensive — spend to stand still as memory and power costs rise.",
         "why_it_matters": "Reframes AI spend: table stakes with FCF pressure, not just growth.",
-        "why_you_care": "Finance Concept — CapEx vs FCF: surging CapEx depresses free cash flow even as revenue grows."
+        "why_you_care": "Finance Concept — CapEx vs FCF: surging CapEx depresses free cash flow even as revenue grows.",
+        "title_zh": "Big Tech 资本开支气球：2026 年有望冲向 7250 亿美元",
+        "summary_zh": "分析称 2026 年 hyperscaler capex 可能具防御性——为保份额不得不投，内存、GPU 与数据中心推高支出，全年或达 7250 亿美元。",
+        "why_it_matters_zh": "金融概念：CapEx vs FCF——营收增长时自由现金流仍可能因 capex 承压，需看 FCF 转化率。",
+        "original_excerpt": "Big Tech capex on track for $725B as AI build-out becomes table stakes",
+        "category": "markets",
+        "published_at": "2026-08-14"
       },
       {
         "title": "Nvidia Q2 preview Aug 26 — the next AI-infra catalyst",
@@ -217,7 +349,13 @@
         "badge": "NVDA · Aug 26",
         "summary": "Nvidia reports Q2 FY27 Aug 26 — Wall Street's pivotal read on datacenter GPU demand, Blackwell ramp, and supply — with tone-setting power for semis and hyperscaler capex names.",
         "why_it_matters": "This print sets the tape for NVDA, semis, and AI infra into September.",
-        "why_you_care": "Focus on datacenter revenue, gross margin, and Blackwell commentary for META/MSFT/GOOGL implications."
+        "why_you_care": "Focus on datacenter revenue, gross margin, and Blackwell commentary for META/MSFT/GOOGL implications.",
+        "title_zh": "英伟达 Q2 前瞻（8 月 26 日）：下一个 AI infra 催化剂",
+        "summary_zh": "英伟达将于 8 月 26 日发布 FY27 Q2，华尔街关注 datacenter 收入与 Blackwell 爬坡指引，将定调半导体情绪。",
+        "why_it_matters_zh": "关注 datacenter 营收、毛利率与 Blackwell 供给表述，对 META/MSFT/GOOGL capex 有外溢。",
+        "original_excerpt": "Nvidia reports Q2 FY27 on Aug 26, the pivotal print for the AI-infra trade",
+        "category": "markets",
+        "published_at": "2026-08-12"
       },
       {
         "title": "Cleveland Fed inflation nowcasting — real-time CPI signal",
@@ -226,7 +364,13 @@
         "badge": "Nowcast",
         "summary": "The Cleveland Fed's nowcasting model provides a daily read on CPI before the official print — currently the market's fastest signal for Fed path repricing after the benign July report.",
         "why_it_matters": "Nowcasts move rate-odds and equity multiples intraday, ahead of official CPI.",
-        "why_you_care": "Use it to anticipate Fed repricing before the next CPI release."
+        "why_you_care": "Use it to anticipate Fed repricing before the next CPI release.",
+        "title_zh": "克利夫兰联储通胀 Nowcasting：实时 CPI 信号",
+        "summary_zh": "克利夫兰联储的 nowcasting 模型提供对 CPI 的近实时估算，帮助在官方数据前预判通胀路径与联储动向。",
+        "why_it_matters_zh": "实用工具：比等 CPI 公布更快建立对利率与市场定价的体感。",
+        "original_excerpt": "Cleveland Fed nowcasting offers near-real-time CPI estimates ahead of official prints",
+        "category": "markets",
+        "published_at": "2026-08-14"
       }
     ],
     "world": [
@@ -237,7 +381,13 @@
         "badge": "Exclusive · Aug 14",
         "summary": "Reuters reports (Aug 14) the US will press allies/partners to align on AI controls and supply chains in the contest with China — extending chip and model governance into diplomatic asks.",
         "why_it_matters": "AI supply chain and model access are becoming alliance politics, affecting chip exports and cloud availability.",
-        "why_you_care": "If you rely on frontier GPUs or cross-border model APIs, this shapes access and cost."
+        "why_you_care": "If you rely on frontier GPUs or cross-border model APIs, this shapes access and cost.",
+        "title_zh": "美国将要求伙伴在中美 AI 竞赛中选边站",
+        "summary_zh": "路透称美国计划告知盟友与伙伴，需在 AI 竞赛中明确选边，涉及芯片出口与供应链合作。",
+        "why_it_matters_zh": "对科技供应链与 infra 供给有实质影响，可能重塑芯片与算力流向。",
+        "original_excerpt": "US to tell partners they must pick sides in the AI race with China",
+        "category": "world",
+        "published_at": "2026-08-14"
       },
       {
         "title": "Fed divided: benign CPI may force a hold, not a cut — Reuters",
@@ -246,7 +396,13 @@
         "badge": "Fed · Aug 14",
         "summary": "Cooler inflation is paradoxically hardening a hold stance at a divided Fed, per Reuters Aug 14, as officials weigh sticky services and fiscal crosscurrents heading into September.",
         "why_it_matters": "Rate expectations anchor both tech valuations and AI capex financing costs.",
-        "why_you_care": "Watch dot plot and Fed speakers into September for the next multiple move."
+        "why_you_care": "Watch dot plot and Fed speakers into September for the next multiple move.",
+        "title_zh": "美联储内部分歧：温和 CPI 或指向按兵不动而非降息",
+        "summary_zh": "路透解读称尽管 CPI 温和，美联储内部仍分歧，按兵不动的概率不低于降息，需关注官员表态。",
+        "why_it_matters_zh": "市场定价在 hold vs cut 间摇摆时，科技股对利率最敏感。",
+        "original_excerpt": "Fed divided as benign CPI may force a hold rather than a cut",
+        "category": "world",
+        "published_at": "2026-08-14"
       },
       {
         "title": "White House national AI policy framework — bid for unified federal approach",
@@ -255,7 +411,13 @@
         "badge": "Policy",
         "summary": "The White House framework pitches nonbinding recommendations for a single federal AI approach, aiming to preempt a patchwork of state laws and ease deployment complexity.",
         "why_it_matters": "A unified framework would lower compliance overhead for AI products operating across states.",
-        "why_you_care": "Relevant if you ship an AI product in the US — affects your risk checklist."
+        "why_you_care": "Relevant if you ship an AI product in the US — affects your risk checklist.",
+        "title_zh": "白宫国家 AI 政策框架：寻求统一联邦路径",
+        "summary_zh": "白宫推出非约束性框架，建议以统一联邦立法取代各州分散监管，降低 AI 产品跨州合规复杂度。",
+        "why_it_matters_zh": "若落地，将直接影响你在美国发布 AI 产品的合规与部署清单。",
+        "original_excerpt": "White House framework outlines nonbinding recommendations for unified federal AI regulation",
+        "category": "world",
+        "published_at": "2026-08-12"
       }
     ],
     "for_you": [
@@ -265,7 +427,13 @@
         "source": "For You",
         "summary": "Claude Code going auto-default is your cue to define permission tiers, filesystem fences, and rollback before you ship any autonomous loop — audit what auto would have done on your repo first.",
         "why_it_matters": "Autonomy without guardrails is a foot-gun; harness design is now the differentiator.",
-        "why_you_care": "Exercise: list 3 disallowed actions and 3 auto-retry rules for your next agent."
+        "why_you_care": "Exercise: list 3 disallowed actions and 3 auto-retry rules for your next agent.",
+        "title_zh": "若自动模式让你不安：先设计你的 harness 再开启自主",
+        "summary_zh": "单一推荐：读透 Claude Code auto 切换一文，明确何时让人介入、何时让 agent 自主，以及如何设计权限与回滚。",
+        "why_it_matters_zh": "把 autonomy 当作设计问题而非开关，是 harness 成熟度的分水岭。",
+        "original_excerpt": "Design your harness before enabling autonomy — decide when to intervene and how to roll back",
+        "category": "for_you",
+        "published_at": "2026-08-14"
       },
       {
         "title": "Save — NVFP4 KV cache as your long-context cost cheat sheet",
@@ -273,7 +441,13 @@
         "source": "For You",
         "summary": "Bookmark the NVFP4 post. When you size your agent's memory window, this tells you how quantizing the KV cache changes dollars per long-horizon task — cheaper than shrinking context naively.",
         "why_it_matters": "You'll reuse it on every architecture review for agent cost.",
-        "why_you_care": "Links your #5 Context window to #22 Cost/latency in one technique."
+        "why_you_care": "Links your #5 Context window to #22 Cost/latency in one technique.",
+        "title_zh": "收藏：把 NVFP4 KV cache 当作长上下文成本速查表",
+        "summary_zh": "收藏 NVIDIA NVFP4 一文，作为你设计 agent 记忆/窗口策略时的成本参照。",
+        "why_it_matters_zh": "它同时连接了上下文工程与成本/延迟两个主题。",
+        "original_excerpt": "Save the NVFP4 KV cache post as your reference for long-context cost",
+        "category": "for_you",
+        "published_at": "2026-08-14"
       },
       {
         "title": "Distribution > model — what Gemini at 1B users teaches your product thinking",
@@ -281,7 +455,13 @@
         "source": "For You",
         "summary": "Gemini's 1B MAU came from bundling into search, Workspace, and Android — not a bigger model. For your small-game idea, ask: what distribution surface already has your users?",
         "why_it_matters": "Solo builders win on distribution, not parameter count.",
-        "why_you_care": "Prompt to sketch one integration wedge (e.g., Sheets plugin, Chrome side-panel) for your next prototype."
+        "why_you_care": "Prompt to sketch one integration wedge (e.g., Sheets plugin, Chrome side-panel) for your next prototype.",
+        "title_zh": "分发大于模型：Gemini 10 亿用户对产品思维的启示",
+        "summary_zh": "Gemini 靠与 Search/Android/Workspace 的集成实现分发超越，提示 AI 产品的增长杠杆在 distribution 而非仅模型能力。",
+        "why_it_matters_zh": "对你规划 small-game/AI 产品的 roadmap 有直接启发：便宜的 router 模型 + 强分发。",
+        "original_excerpt": "Gemini at 1B users signals distribution as the growth lever beyond model capability",
+        "category": "for_you",
+        "published_at": "2026-08-11"
       }
     ]
   },
