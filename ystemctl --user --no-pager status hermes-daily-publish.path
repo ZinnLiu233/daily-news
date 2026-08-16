@@ -1,6 +1,0 @@
-[0;1;32m●[0m hermes-daily-publish.path - Watch Hermes Daily News publish flag
-     Loaded: loaded (]8;;file://hermes/home/linuxuser/.config/systemd/user/hermes-daily-publish.path/home/linuxuser/.config/systemd/user/hermes-daily-publish.path]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
-     Active: [0;1;32mactive (waiting)[0m since Sat 2026-08-15 23:56:49 UTC; 6s ago
-   Triggers: ● hermes-daily-publish.service
-
-Aug 15 23:56:49 hermes systemd[929]: Started hermes-daily-publish.path - Watch Hermes Daily News publish flag.
