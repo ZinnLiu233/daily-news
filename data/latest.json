@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-16",
-  "generated_at": "2026-08-16T00:16:36.918895+00:00",
+  "date": "2026-08-15",
+  "generated_at": "2026-08-16T00:20:56.844516+00:00",
   "signal": "The Aug 11-15 cluster shows a single throughline: AI is scaling by distribution, not just size — Gemini at 1B users via product integration, Muse Glimmer via single-GPU edge, Nova Act via managed browser automation, and Claude/Cursor via auto-mode agents on your own infra. The scarce resource is no longer model IQ but reliable deployment at scale, which is why infra (KV cache, datacenter buildout) and harness (durable state, routers) dominated the week's real releases.",
   "sections": {
     "top": [

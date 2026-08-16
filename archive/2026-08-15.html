@@ -26,170 +26,219 @@ footer{margin-top:50px;color:var(--muted);font-size:13px}
 <h1>Zijing Daily</h1>
 <div class="sub">AI · Infra · Products · Markets · World · 2026-08-15</div>
 <nav><a href="#top">🔥 Today&#x27;s 3</a><a href="#ai_agents">🤖 AI / Agents</a><a href="#ai_infra">⚙️ AI Infra</a><a href="#products">🚀 Products / Startups / Open Source</a><a href="#markets">💰 Markets / Finance</a><a href="#world">🌎 World / US</a><a href="#for_you">🎯 For You</a></nav>
-<div class="archive"><b>Archive:</b><a href="/daily-news/archive/2026-08-15.html">2026-08-15</a></div>
+<div class="archive"><b>Archive:</b><a href="/daily-news/archive/2026-08-16.html">2026-08-16</a><a href="/daily-news/archive/2026-08-15.html">2026-08-15</a></div>
 </header>
-<section class="signal"><h2>💡 The Signal</h2><p>Across Aug 10-15, every major lab converged on the same strategy: ship smaller, cheaper agentic models (Muse Glimmer, Gemini 3.7 Flash, GPT-5.6) that run closer to the user, while simultaneously hardening the harness layer (LangGraph 1.0 durable state, Nova Act browser reliability, Claude Code self-hosted) — the bottleneck has shifted from raw model power to reliable agent orchestration and deployment economics.</p></section>
+<section class="signal"><h2>💡 The Signal</h2><p>The Aug 11-15 cluster shows a single throughline: AI is scaling by distribution, not just size — Gemini at 1B users via product integration, Muse Glimmer via single-GPU edge, Nova Act via managed browser automation, and Claude/Cursor via auto-mode agents on your own infra. The scarce resource is no longer model IQ but reliable deployment at scale, which is why infra (KV cache, datacenter buildout) and harness (durable state, routers) dominated the week&#x27;s real releases.</p></section>
 <section id="top"><h2>🔥 Today&#x27;s 3</h2><div class="grid">
     <article class="card">
-      <div class="meta"><span>CNBC / Meta</span><span>Muse Spark 1.2 also going open-weight</span></div>
-      <h3><a href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html" target="_blank" rel="noopener noreferrer">Meta open-sources Muse Glimmer — compact agentic model that runs on a single GPU</a></h3>
-      <p>On Aug 10, Meta released Muse Glimmer, a small open-weight model purpose-built for agentic tasks that runs on a Mac/PC with one graphics card, and confirmed Muse Spark 1.2 will be open-sourced. Zuckerberg framed it as a U.S. open-AI leadership push.</p>
-      <div class="why"><b>Why it matters:</b> It marks the first time Meta&#x27;s frontier-grade agent reasoning is packaged for edge/local deployment, directly competing with API-only frontier models on cost and privacy.</div>
-      <div class="care"><b>Why you care:</b> As a learning reference for Production-grade AI: how to design a model that&#x27;s &#x27;good enough&#x27; for tool loops at 1/10th the serving cost.</div>
+      <div class="meta"><span>Forbes / Google Blog</span><span>1B MAU · Aug 11</span></div>
+      <h3><a href="https://www.forbes.com/sites/antoniopequenoiv/2026/08/11/gemini-becomes-googles-fastest-growing-product-ever-after-hitting-1-billion-monthly-users/" target="_blank" rel="noopener noreferrer">Gemini hits 1B monthly users — Google&#x27;s fastest-growing product ever</a></h3>
+      <p>Google confirmed Aug 11 that the Gemini app has crossed 1 billion monthly active users, making it the fastest-growing product in Google history. Google&#x27;s product blog noted expanded connected-app integrations the same week, underpinning distribution via Workspace and Android.</p>
+      <div class="why"><b>Why it matters:</b> At 1B MAU, Gemini moves from model race to distribution race — product bundling and cross-app connectivity matter more than leaderboard deltas.</div>
+      <div class="care"><b>Why you care:</b> For your &#x27;Products / AI-native UX&#x27; lens: observe how Google converts model wins into daily-use hooks. Distribution is the moat.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>LangChain Blog</span><span>v1.0 milestone</span></div>
-      <h3><a href="https://blog.langchain.com/langchain-langgraph-1dot0/" target="_blank" rel="noopener noreferrer">LangGraph 1.0 &amp; LangChain 1.0 reach GA with durable state and standardized tools</a></h3>
-      <p>Announced this week, v1.0 brings production-ready agent graphs: standardized tool definitions, middleware customization, durable state persistence, and checkpointed workflows. LangGraph is already powering agents at Uber, LinkedIn, and Klarna.</p>
-      <div class="why"><b>Why it matters:</b> It&#x27;s the clearest signal that agent frameworks are maturing from demos to stateful, recoverable production systems — comparable to moving from scripts to workflow engines.</div>
-      <div class="care"><b>Why you care:</b> Directly maps to your mental model layer &#x27;Durable workflows / state machines&#x27; — the layer where Production breaks.</div>
+      <div class="meta"><span>TechCrunch / Anthropic</span><span>Default since Aug 14</span></div>
+      <h3><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">Claude Code auto mode now default — Anthropic flips the agent switch Aug 14</a></h3>
+      <p>Anthropic made Claude Code&#x27;s auto mode the default for Pro, Max, and Team on Aug 14 (announced Aug 9). Agents now autonomously pick tools and run multi-step edits unless a user or admin opts out, shifting from human-approval-every-step to harness-governed autonomy.</p>
+      <div class="why"><b>Why it matters:</b> Defaults set behavior at scale: this is the largest live test of autonomous coding harness governance (permissions, sandboxing, observability) in production.</div>
+      <div class="care"><b>Why you care:</b> Directly hits your harness/runtime stack — compare Anthropic&#x27;s auto-mode guardrails to your own agent permission design.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>Intellectia / CNBC</span><span>CPI 3.4% · AI tape</span></div>
-      <h3><a href="https://intellectia.ai/blog/sp500-record-high-august-14-2026" target="_blank" rel="noopener noreferrer">S&amp;P 500 hits fresh all-time high (7,814) on cool CPI and AI earnings</a></h3>
-      <p>The S&amp;P 500 closed at a record 7,814.88 on Aug 14, driven by July CPI at ~3.4% YoY (tame) and strong AI-linked earnings. Traders raised Fed pause expectations into September.</p>
-      <div class="why"><b>Why it matters:</b> Cool inflation + AI capex is the current market flywheel: lower rate fears lift multiples while AI spend lifts earnings.</div>
-      <div class="care"><b>Why you care:</b> Finance Concept — CPI &amp; multiples: cooler CPI → lower expected Fed hikes → lower discount rate → higher present value of future tech earnings.</div>
+      <div class="meta"><span>Reuters / Yahoo Finance</span><span>CPI + Fed + S&amp;P</span></div>
+      <h3><a href="https://www.reuters.com/business/cooler-inflation-data-may-force-warshs-divided-fed-hold-line-rates-2026-08-14/" target="_blank" rel="noopener noreferrer">CPI cools to ~3.4% but Fed remains divided — S&amp;P holds record 7,814</a></h3>
+      <p>July CPI printed cool (~3.4% YoY) Aug 12, keeping the S&amp;P near its Aug 14 record 7,814. Reuters Aug 14 noted a divided Fed is now more likely to hold rates rather than cut, as benign inflation collides with sticky services and election-adjacent politics.</p>
+      <div class="why"><b>Why it matters:</b> The market&#x27;s &#x27;cool CPI → cut&#x27; trade is stalling; hold-not-cut reprices duration and tech multiples.</div>
+      <div class="care"><b>Why you care:</b> Finance Concept — Fed &#x27;hold&#x27; vs &#x27;cut&#x27;: holding keeps discount rates higher, compressing long-duration growth valuations even amid AI earnings strength.</div>
     </article></div></section><section id="ai_agents"><h2>🤖 AI / Agents</h2><div class="grid">
     <article class="card">
-      <div class="meta"><span>Digital Trends / Google</span><span>Aug 14–15</span></div>
-      <h3><a href="https://www.digitaltrends.com/computing/google-drops-gemini-3-7-flash-model-and-its-ready-to-handle-your-chores-with-the-spark-agent/" target="_blank" rel="noopener noreferrer">Google drops Gemini 3.7 Flash — half the price of 3.6, now powering Spark agent</a></h3>
-      <p>Google launched Gemini 3.7 Flash on Aug 14–15, at ~50% the price of 3.6. Its first client is Google&#x27;s own cloud-based Spark agent, where it improves tool use and multi-step task accuracy per AutomationBench.</p>
-      <div class="why"><b>Why it matters:</b> Same pattern as Meta: faster, cheaper inference-tuned models optimized for agent loops, not chatbot flair.</div>
-      <div class="care"><b>Why you care:</b> Links to &#x27;Cost / latency / model routing&#x27; — when to route chores to a Flash-class model vs a frontier one.</div>
+      <div class="meta"><span>TechCrunch</span><span>Agents · Aug 14</span></div>
+      <h3><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">Claude Code auto mode enabled by default — permissions now opt-out</a></h3>
+      <p>Starting Aug 14, Claude Code sessions for Pro/Max/Team default to auto mode, letting the agent chain tools without per-step approval. Coverage from 9to5Mac and Dealroom confirms admins can override at the org level.</p>
+      <div class="why"><b>Why it matters:</b> Flips the safety/security model from permissive-every-step to policy-based autonomy — the harness must now catch mistakes proactively.</div>
+      <div class="care"><b>Why you care:</b> Your &#x27;Sandboxing / permissions&#x27; topic: study how Anthropic scopes file/network access under auto mode.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>OpenAI / Releasebot</span><span>Coding Agent Index SOTA</span></div>
-      <h3><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener noreferrer">OpenAI ships GPT-5.6 — stronger agent performance at lower cost, plus multi-agent orchestration</a></h3>
-      <p>GPT-5.6 (Aug 13) sets a new state-of-the-art on the Artificial Analysis Coding Agent Index (80, +2.8) with less than half the output tokens, adds native multi-agent orchestration and programmatic tool controls in the Responses API.</p>
-      <div class="why"><b>Why it matters:</b> OpenAI is moving agent logic from prompt hacks into first-class API primitives (reasoning continuity, tool orchestration).</div>
-      <div class="care"><b>Why you care:</b> Maps to &#x27;Agent harness vs model&#x27; — now the platform itself offers orchestration, reducing custom harness code.</div>
+      <div class="meta"><span>Cursor Blog / Releasebot</span><span>Aug 13</span></div>
+      <h3><a href="https://cursor.com/blog" target="_blank" rel="noopener noreferrer">Cursor ships Router for Teams + AIUC-1 cert + 3x faster Cloud Agents</a></h3>
+      <p>Cursor&#x27;s Aug 13 notes: Cursor Router intelligently routes each request to the best model for the task (cost/latency/quality tradeoff), Cloud Agents start 3x faster with build caching, and Cursor earned AIUC-1 certification for agent security and reliability.</p>
+      <div class="why"><b>Why it matters:</b> Model routing + verified security are the two enterprise blockers for coding agents — Cursor productized both in one drop.</div>
+      <div class="care"><b>Why you care:</b> Compare Cursor Router vs OpenAI Responses multi-agent orchestration — two takes on &#x27;orchestration as a platform primitive.&#x27;</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>Google Blog</span><span>Gemini · Aug 2026</span></div>
+      <h3><a href="https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/" target="_blank" rel="noopener noreferrer">Google connects more apps to Gemini — August 2026 expansion</a></h3>
+      <p>Google&#x27;s August update expands Gemini&#x27;s connected apps and services, letting the assistant act across more user data sources with new plugins and deeper Workspace ties — complementing the 1B MAU push.</p>
+      <div class="why"><b>Why it matters:</b> Agent usefulness scales with tool/MCP surface area; Google is racing to wire Gemini into the everyday app graph.</div>
+      <div class="care"><b>Why you care:</b> Your MCP vs tool-calling question: Google&#x27;s connected-apps approach is a proprietary MCP equivalent — watch the UX.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>OpenAI / Releasebot</span><span>Agent SOTA</span></div>
+      <h3><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener noreferrer">OpenAI GPT-5.6 — Coding Agent Index SOTA with half the tokens + orchestration</a></h3>
+      <p>Released Aug 13, GPT-5.6 tops the Coding Agent Index at 80 (+2.8) using &lt;50% of prior tokens and adds native multi-agent orchestration and programmatic tool controls in the Responses API.</p>
+      <div class="why"><b>Why it matters:</b> OpenAI bakes orchestration into the platform, reducing DIY harness code for multi-agent workflows.</div>
+      <div class="care"><b>Why you care:</b> Harness/runtime layer — when the model provider offers orchestration, your job shifts to policy/eval/observability.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>Digital Trends / Google</span><span>Aug 14–15</span></div>
+      <h3><a href="https://www.digitaltrends.com/computing/google-drops-gemini-3-7-flash-model-and-its-ready-to-handle-your-chores-with-the-spark-agent/" target="_blank" rel="noopener noreferrer">Google Gemini 3.7 Flash — half the price of 3.6, powering Spark agent</a></h3>
+      <p>Gemini 3.7 Flash launched Aug 14–15 at ~50% the price of 3.6 and is already powering Google&#x27;s Spark cloud agent with stronger tool-use and multi-step accuracy on AutomationBench.</p>
+      <div class="why"><b>Why it matters:</b> Continues the week-long trend: cheaper inference-tuned models for agent loops, not just chat quality.</div>
+      <div class="care"><b>Why you care:</b> Cost/latency routing — your router should default chores to Flash-class models, reserving frontier for hard reasoning.</div>
     </article>
     <article class="card">
       <div class="meta"><span>AWS</span><span>Computer use GA</span></div>
-      <h3><a href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" target="_blank" rel="noopener noreferrer">Amazon Nova Act now generally available — reliable agents for browser UI workflows</a></h3>
-      <p>AWS GA&#x27;d Nova Act, a service for agents that automate browser tasks — form filling, search &amp; extract, shopping/booking, QA — with reliability controls for production UI automation.</p>
-      <div class="why"><b>Why it matters:</b> Brings &#x27;computer use&#x27; from research demo to managed service with observability — the hardening layer every browser agent needs.</div>
-      <div class="care"><b>Why you care:</b> Directly relevant to &#x27;Computer use&#x27; and &#x27;Reliability / retries&#x27; in your 24-topic thread.</div>
+      <h3><a href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" target="_blank" rel="noopener noreferrer">Amazon Nova Act GA — managed browser-use for production workflows</a></h3>
+      <p>Nova Act is now GA as a managed service for reliable browser automation — forms, search &amp; extract, shopping/booking, QA — with observability and retry controls for production.</p>
+      <div class="why"><b>Why it matters:</b> Moves &#x27;computer use&#x27; from demo to SLA-backed service; the browser agent finally has an ops story.</div>
+      <div class="care"><b>Why you care:</b> For your &#x27;Computer use / reliability&#x27; track — compare Nova Act&#x27;s retry model to your own.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>Anthropic / Claude Blog</span><span>Aug 6 · public beta</span></div>
-      <h3><a href="https://claude.com/blog/run-claude-code-sessions-on-your-own-compute" target="_blank" rel="noopener noreferrer">Claude Code self-hosted environments enter public beta</a></h3>
-      <p>Teams can now run Claude Code cloud sessions on their own infrastructure (self-hosted runner on Team/Enterprise). Public beta as of Aug 6, with internal-network access and custom controls.</p>
-      <div class="why"><b>Why it matters:</b> Addresses the #1 enterprise blocker for coding agents: data residency and network isolation without losing cloud orchestration.</div>
-      <div class="care"><b>Why you care:</b> Sandboxing / permissions in practice — how Anthropic solves &#x27;run agent near my repo but keep it fenced&#x27;.</div>
-    </article>
-    <article class="card">
-      <div class="meta"><span>The New Stack</span><span></span></div>
-      <h3><a href="https://thenewstack.io/memory-for-ai-agents-a-new-paradigm-of-context-engineering/" target="_blank" rel="noopener noreferrer">Memory for AI Agents — context engineering as a new paradigm</a></h3>
-      <p>A deep explainer framing agent memory as context engineering: how working memory, long-term recall, and procedural memory are curated and injected into the window, not just appended.</p>
-      <div class="why"><b>Why it matters:</b> As context windows grow, the differentiator shifts from size to what you choose to put in and when.</div>
-      <div class="care"><b>Why you care:</b> Core to your thread #6–8: Context engineering vs naively stuffing memory.</div>
-    </article>
-    <article class="card">
-      <div class="meta"><span>The New Stack</span><span>MCP</span></div>
-      <h3><a href="https://thenewstack.io/model-context-protocol-roadmap-2026/" target="_blank" rel="noopener noreferrer">MCP roadmap 2026 — biggest production pain points about to be solved</a></h3>
-      <p>The MCP roadmap post argues the protocol&#x27;s main remaining blockers for production — stateless flows, auth, transport, tool discovery — are being tackled in the July 28 spec and follow-ons, letting teams expose services via MCP servers instead of custom integrations.</p>
-      <div class="why"><b>Why it matters:</b> If MCP stabilizes, &#x27;connect your tools&#x27; becomes a standard layer rather than bespoke harness code.</div>
-      <div class="care"><b>Why you care:</b> Your topic #10 (MCP): when does MCP replace direct tool-calling?</div>
+      <div class="meta"><span>The New Stack</span><span>Context &amp; memory</span></div>
+      <h3><a href="https://thenewstack.io/memory-for-ai-agents-a-new-paradigm-of-context-engineering/" target="_blank" rel="noopener noreferrer">Memory as context engineering — the new agent paradigm</a></h3>
+      <p>A primer arguing agent memory is not appending history but curating working, long-term, and procedural memory into the window — the core of context engineering as windows grow.</p>
+      <div class="why"><b>Why it matters:</b> As context grows, selection beats size — this reframes eval and harness design.</div>
+      <div class="care"><b>Why you care:</b> Your threads #5–8: design a memory policy before expanding context limits.</div>
     </article></div></section><section id="ai_infra"><h2>⚙️ AI Infra</h2><div class="grid">
     <article class="card">
-      <div class="meta"><span>NVIDIA Developer Blog</span><span>KV cache · quantization</span></div>
-      <h3><a href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">NVIDIA: Optimizing inference for long context &amp; large batches with NVFP4 KV cache</a></h3>
-      <p>NVIDIA details NVFP4-quantized KV cache to handle long-context, large-batch inference: lower memory footprint and higher throughput while preserving quality — critical for agentic workloads that keep long histories.</p>
-      <div class="why"><b>Why it matters:</b> KV cache is the hidden tax on agents; quantizing it is the cheapest way to scale long-horizon tasks.</div>
-      <div class="care"><b>Why you care:</b> Infra topic #5–6: directly explains batching/KV cache cost for your agent loops.</div>
+      <div class="meta"><span>NVIDIA Developer Blog</span><span>KV cache · NVFP4</span></div>
+      <h3><a href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">NVIDIA: NVFP4 KV cache for long-context, large-batch inference</a></h3>
+      <p>NVIDIA details NVFP4-quantized KV cache to sustain long-context, large-batch inference with lower memory and higher throughput without quality loss — aimed squarely at agentic workloads with long histories.</p>
+      <div class="why"><b>Why it matters:</b> KV cache quant is the cheapest lever to scale agent sessions; it changes serving economics overnight.</div>
+      <div class="care"><b>Why you care:</b> Infra topics #5–6: keep this as your KV-cache cost reference.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>Intellectia</span><span>Preview: Aug 26</span></div>
-      <h3><a href="https://intellectia.ai/blog/nvidia-earnings-preview-august-2026-analysis" target="_blank" rel="noopener noreferrer">Nvidia earnings preview — Aug 26 Q2 FY27 as the next AI-infra catalyst</a></h3>
-      <p>Nvidia reports Q2 FY27 on Aug 26 — the pivotal print for the entire AI-infra trade. Wall Street expects another beat on data-center GPUs, with guidance on Blackwell ramp and supply shaping semis sentiment.</p>
-      <div class="why"><b>Why it matters:</b> The print will set tone for NVDA, semis, and AI capex names into September.</div>
-      <div class="care"><b>Why you care:</b> Watch for data-center revenue, gross margin, and Blackwell commentary — the read-through to META/MSFT/GOOGL capex.</div>
+      <div class="meta"><span>Reuters / QZ</span><span>AMD · Q2 FY26</span></div>
+      <h3><a href="https://www.reuters.com/business/amd-forecasts-upbeat-revenue-ai-data-center-demand-beats-quarterly-estimates-2026-08-04/" target="_blank" rel="noopener noreferrer">AMD posts record $11.5B Q2 — datacenter sales double</a></h3>
+      <p>AMD reported Q2 revenue of $11.5B (+50% YoY), a company record, driven by datacenter products doubling. Guidance Aug 4 was upbeat on AI demand, though the stock still faced &#x27;not enough AI wow&#x27; scrutiny vs Nvidia.</p>
+      <div class="why"><b>Why it matters:</b> Datacenter is now the swing revenue driver for both AMD and Nvidia — confirming the capex supercycle.</div>
+      <div class="care"><b>Why you care:</b> Watch AMD vs NVDA read-through into META/MSFT/GOOGL capex and your NVDA Aug 26 earnings preview.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>Mirantis</span><span></span></div>
-      <h3><a href="https://www.mirantis.com/blog/best-infrastructure-for-scalable-ai-inference/" target="_blank" rel="noopener noreferrer">Best infrastructure patterns for scalable AI inference</a></h3>
-      <p>A practitioner overview of scalable inference stacks — routing, batching, autoscaling, and serving patterns that keep latency predictable under spiky agent workloads.</p>
-      <div class="why"><b>Why it matters:</b> Agentic traffic is bursty and tool-heavy; classic serving assumptions break without new batching/routing designs.</div>
-      <div class="care"><b>Why you care:</b> Foundation for &#x27;Production deployment&#x27; and &#x27;Latency / throughput&#x27; in your infra mental model.</div>
+      <div class="meta"><span>Data Center Knowledge</span><span>Buildout</span></div>
+      <h3><a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-august-2026" target="_blank" rel="noopener noreferrer">New datacenter builds — August 2026 construction tracker</a></h3>
+      <p>August tracker lists fresh hyperscale and colocation builds breaking ground — power and interconnection dominate the bottleneck, not just chips. Pairs with Clifford Chance&#x27;s 2026 AI compute infra insights.</p>
+      <div class="why"><b>Why it matters:</b> AI infra is now a power/networking problem as much as a GPU problem.</div>
+      <div class="care"><b>Why you care:</b> For &#x27;Datacenter / power / networking&#x27; — where your serving latency actually lives.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>GPUInsights</span><span>Power &amp; cooling</span></div>
+      <h3><a href="https://gpuinsights.net/ai-data-center-power-infrastructure-2026/" target="_blank" rel="noopener noreferrer">AI datacenter power — GPU clusters and the 2026 infrastructure stack</a></h3>
+      <p>Breakdown of the 2026 GPU-clusters power stack: distribution, backup, cooling, and interconnect — with case studies on how firms redesign datacenters for energy-dense AI.</p>
+      <div class="why"><b>Why it matters:</b> Training and long-context inference drive megawatt-scale design choices that ripple into cloud pricing.</div>
+      <div class="care"><b>Why you care:</b> Links cost/latency to physics — useful mental model for production deployment tradeoffs.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>Mirantis</span><span>Serving</span></div>
+      <h3><a href="https://www.mirantis.com/blog/best-infrastructure-for-scalable-ai-inference/" target="_blank" rel="noopener noreferrer">Best patterns for scalable AI inference — batching, routing, autoscaling</a></h3>
+      <p>Practitioner guide to scalable inference: request batching, model routing, autoscaling, and observability for bursty agent traffic where classic serving assumptions break.</p>
+      <div class="why"><b>Why it matters:</b> Agentic traffic is spiky and tool-heavy; serving architectures need rethinking.</div>
+      <div class="care"><b>Why you care:</b> Foundation for your &#x27;Production deployment / latency&#x27; layer.</div>
     </article></div></section><section id="products"><h2>🚀 Products / Startups / Open Source</h2><div class="grid">
     <article class="card">
-      <div class="meta"><span>TechCrunch / Meta</span><span>Beta · Aug 5</span></div>
-      <h3><a href="https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/" target="_blank" rel="noopener noreferrer">Meta launches Muse Code — AI agent for large codebases (beta)</a></h3>
-      <p>Muse Code, in beta, tackles complete software-engineering tasks across large repos — Meta&#x27;s first terminal coding agent, positioned against Claude Code and Codex.</p>
-      <div class="why"><b>Why it matters:</b> Meta is entering the coding-agent harness race directly, pairing the open Muse models with an agent runtime.</div>
-      <div class="care"><b>Why you care:</b> Compare harness designs: Muse Code vs Claude Code vs Codex — same goal, different tool/state choices.</div>
+      <div class="meta"><span>CNBC / Meta</span><span>Open-weight · Aug 10</span></div>
+      <h3><a href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html" target="_blank" rel="noopener noreferrer">Meta Muse Glimmer + Muse Spark 1.2 to go open-weight</a></h3>
+      <p>Meta launched Muse Glimmer, a compact agentic model runnable on a single GPU/Mac, and confirmed Muse Spark 1.2 will be open-sourced — framed by Zuckerberg as a US open-AI leadership play.</p>
+      <div class="why"><b>Why it matters:</b> Edge-capable agentic models challenge API-only economics and enable private/local deployments.</div>
+      <div class="care"><b>Why you care:</b> Reference for &#x27;good enough&#x27; agent models at 1/10th serving cost for your small-game prototypes.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>Pasquale Pillitteri</span><span></span></div>
+      <div class="meta"><span>TechCrunch</span><span>$28.5M · Aug 6</span></div>
+      <h3><a href="https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/" target="_blank" rel="noopener noreferrer">Naïve raises $28.5M to automate company setup and ops</a></h3>
+      <p>Naïve raised $28.5M to automate incorporation, compliance, and back-office workflows with AI agents — a vertical agent play for founder ops.</p>
+      <div class="why"><b>Why it matters:</b> Vertical ops agents with clear ROI and audit trails are the current fundable wedge.</div>
+      <div class="care"><b>Why you care:</b> Startup idea signal: boring, high-friction workflows &gt; generic assistants for first revenue.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>Pasquale Pillitteri</span><span>OSS · frameworks</span></div>
       <h3><a href="https://pasqualepillitteri.it/en/news/1476/10-open-source-ai-agent-frameworks-2026" target="_blank" rel="noopener noreferrer">10 open-source AI agent frameworks to watch in 2026</a></h3>
-      <p>A curated list of 10 OSS agent frameworks (including LangGraph, CrewAI, AutoGen) comparing language, hosting, and feature tradeoffs — useful as a shortlist for your first agentic POC.</p>
-      <div class="why"><b>Why it matters:</b> Discovery-mode friendly: breadth-first map of the framework landscape without over-committing to one.</div>
-      <div class="care"><b>Why you care:</b> Quick way to pick a framework for your small-game / AI-product experiments.</div>
+      <p>Curated comparison of 10 OSS agent frameworks (LangGraph, CrewAI, AutoGen and more) across language, hosting, and capabilities — useful shortlist for your first POC.</p>
+      <div class="why"><b>Why it matters:</b> Breadth-first map for Discovery Mode without premature commitment.</div>
+      <div class="care"><b>Why you care:</b> Quick picker for your next agent harness experiment.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>OSSInsight</span><span></span></div>
-      <h3><a href="https://ossinsight.io/trending/ai" target="_blank" rel="noopener noreferrer">Trending AI repos on GitHub — real-time OSS rankings</a></h3>
-      <p>Live ranking of trending AI repos — a good daily scan for novel tools, agent demos, and infra utilities that haven&#x27;t hit the news cycle yet.</p>
-      <div class="why"><b>Why it matters:</b> Often surfaces the next LangGraph or MCP server before press coverage.</div>
-      <div class="care"><b>Why you care:</b> Discovery habit: 2-min daily scan for idea generation.</div>
+      <div class="meta"><span>OSSInsight</span><span>OSS discovery</span></div>
+      <h3><a href="https://ossinsight.io/trending/ai" target="_blank" rel="noopener noreferrer">Trending AI repos — live OSS rankings to scan daily</a></h3>
+      <p>Real-time ranking of trending AI repos — surfaces novel agent demos, MCP servers, and infra utilities before press coverage.</p>
+      <div class="why"><b>Why it matters:</b> Early signal for the next framework or tool you will actually import.</div>
+      <div class="care"><b>Why you care:</b> 2-min daily scan habit for idea generation.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>Vercel / GitHub</span><span>Dev tools</span></div>
+      <h3><a href="https://github.com/vercel/ai/releases" target="_blank" rel="noopener noreferrer">Vercel AI SDK — August 2026 patches for OpenAI-compatible providers</a></h3>
+      <p>The AI SDK (TypeScript) issued August patches updating OpenAI-compatible and other provider dependencies — the toolkit for building AI apps with Next.js / Svelte / Node.</p>
+      <div class="why"><b>Why it matters:</b> Keeps the leading web AI toolkit in sync with fast-moving provider APIs.</div>
+      <div class="care"><b>Why you care:</b> If you ship an AI product on Next.js, this is your agent UI glue.</div>
     </article></div></section><section id="markets"><h2>💰 Markets / Finance</h2><div class="grid">
     <article class="card">
-      <div class="meta"><span>Yahoo Finance / CNBC</span><span>Aug 12 CPI read</span></div>
-      <h3><a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-august-12-dow-sp-500-nasdaq-cpi-report-091555133.html" target="_blank" rel="noopener noreferrer">S&amp;P 500, Nasdaq edge higher on cooler inflation — record chase continues</a></h3>
-      <p>Stocks extended gains after July CPI printed cool, reinforcing the S&amp;P record run. Tech led on AI earnings strength; rate-sensitive names also bid.</p>
-      <div class="why"><b>Why it matters:</b> Confirms the CPI → rate-cut-odds → equity-multiple chain driving this rally.</div>
-      <div class="care"><b>Why you care:</b> Finance Concept — discount rates: lower expected rates mechanically inflate valuations, especially long-duration tech.</div>
+      <div class="meta"><span>Intellectia</span><span>S&amp;P · record</span></div>
+      <h3><a href="https://intellectia.ai/blog/sp500-record-high-august-14-2026" target="_blank" rel="noopener noreferrer">S&amp;P at record 7,814 — what&#x27;s driving the historic rally</a></h3>
+      <p>The S&amp;P closed at 7,814.88 Aug 14 on cool CPI (~3.4% YoY) and AI earnings strength; Intellectia&#x27;s explainer links rate-cut odds and AI capex to sustained multiple expansion.</p>
+      <div class="why"><b>Why it matters:</b> The &#x27;cooler inflation + AI spend&#x27; flywheel is still powering equities.</div>
+      <div class="care"><b>Why you care:</b> Finance Concept — Multiples: falling rate expectations lower discount rates, raising present value of long-duration tech cash flows.</div>
     </article>
     <article class="card">
       <div class="meta"><span>Business Insider</span><span>CapEx watch</span></div>
-      <h3><a href="https://www.businessinsider.com/big-tech-spending-capex-earnings-season-memory-prices-ai-2026-7" target="_blank" rel="noopener noreferrer">Is Big Tech spending more just to stand still in the AI race? — capex balloon</a></h3>
-      <p>Analysis argues hyperscalers&#x27; 2026 capex surge may be defensive — memory prices, GPUs, and datacenter build-outs force spend just to keep share. AI capex on track toward ~$725B for Big Tech this year.</p>
-      <div class="why"><b>Why it matters:</b> Reframes AI infra spend: not just growth investment but table stakes with margin pressure.</div>
-      <div class="care"><b>Why you care:</b> Finance Concept — CapEx vs OpEx &amp; FCF: surging CapEx can depress free cash flow even as revenue grows; watch FCF conversion.</div>
+      <h3><a href="https://www.businessinsider.com/big-tech-spending-capex-earnings-season-memory-prices-ai-2026-7" target="_blank" rel="noopener noreferrer">Big Tech capex balloon — on track for $725B in 2026</a></h3>
+      <p>Big Tech&#x27;s 2026 capex is ballooning toward ~$725B, driven by GPUs, memory prices, and datacenter buildout. Analysis warns much of it may be defensive — spend to stand still as memory and power costs rise.</p>
+      <div class="why"><b>Why it matters:</b> Reframes AI spend: table stakes with FCF pressure, not just growth.</div>
+      <div class="care"><b>Why you care:</b> Finance Concept — CapEx vs FCF: surging CapEx depresses free cash flow even as revenue grows.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>CNBC</span><span>META</span></div>
-      <h3><a href="https://www.cnbc.com/2026/07/29/meta-q2-earnings-report-2026.html" target="_blank" rel="noopener noreferrer">Meta Q2 recap — stock dips on guidance despite open-weight push</a></h3>
-      <p>Meta&#x27;s Q2 report (late July) saw shares dip on soft guidance and thinner free cash flow, even as the company leaned into open-weight AI (Muse line) and ad-infra strength.</p>
-      <div class="why"><b>Why it matters:</b> Your employer ticker: market is weighing AI investment intensity against near-term FCF.</div>
-      <div class="care"><b>Why you care:</b> Track META on margins, Reality Labs burn, and ad-revenue leverage to AI capex.</div>
+      <div class="meta"><span>Intellectia</span><span>NVDA · Aug 26</span></div>
+      <h3><a href="https://intellectia.ai/blog/nvidia-earnings-preview-august-2026" target="_blank" rel="noopener noreferrer">Nvidia Q2 preview Aug 26 — the next AI-infra catalyst</a></h3>
+      <p>Nvidia reports Q2 FY27 Aug 26 — Wall Street&#x27;s pivotal read on datacenter GPU demand, Blackwell ramp, and supply — with tone-setting power for semis and hyperscaler capex names.</p>
+      <div class="why"><b>Why it matters:</b> This print sets the tape for NVDA, semis, and AI infra into September.</div>
+      <div class="care"><b>Why you care:</b> Focus on datacenter revenue, gross margin, and Blackwell commentary for META/MSFT/GOOGL implications.</div>
     </article>
     <article class="card">
-      <div class="meta"><span>Phoenix Business Journal</span><span>Seed · Aug 14</span></div>
-      <h3><a href="https://www.bizjournals.com/phoenix/news/2026/08/14/miihealth-raises-seed-round.html" target="_blank" rel="noopener noreferrer">MiiHealth AI raises $2.8M to scale patient-intake agent (Phoenix)</a></h3>
-      <p>MiiHealth AI closed $2.8M seed on Aug 14 to scale its patient-intake agent that automates front-desk workflows and EHR integration.</p>
-      <div class="why"><b>Why it matters:</b> Small but representative: vertical AI agents (healthcare admin) are fundable at seed with narrow wedge + EHR moat.</div>
-      <div class="care"><b>Why you care:</b> Startup idea signal — narrow, auditable workflows beat generic chatbots for first revenue.</div>
+      <div class="meta"><span>Cleveland Fed</span><span>Nowcast</span></div>
+      <h3><a href="https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting" target="_blank" rel="noopener noreferrer">Cleveland Fed inflation nowcasting — real-time CPI signal</a></h3>
+      <p>The Cleveland Fed&#x27;s nowcasting model provides a daily read on CPI before the official print — currently the market&#x27;s fastest signal for Fed path repricing after the benign July report.</p>
+      <div class="why"><b>Why it matters:</b> Nowcasts move rate-odds and equity multiples intraday, ahead of official CPI.</div>
+      <div class="care"><b>Why you care:</b> Use it to anticipate Fed repricing before the next CPI release.</div>
     </article></div></section><section id="world"><h2>🌎 World / US</h2><div class="grid">
     <article class="card">
+      <div class="meta"><span>Reuters</span><span>Exclusive · Aug 14</span></div>
+      <h3><a href="https://www.reuters.com/world/china/us-tell-partners-they-must-pick-sides-ai-race-with-china-2026-08-14/" target="_blank" rel="noopener noreferrer">US to tell partners they must pick sides in AI race with China</a></h3>
+      <p>Reuters reports (Aug 14) the US will press allies/partners to align on AI controls and supply chains in the contest with China — extending chip and model governance into diplomatic asks.</p>
+      <div class="why"><b>Why it matters:</b> AI supply chain and model access are becoming alliance politics, affecting chip exports and cloud availability.</div>
+      <div class="care"><b>Why you care:</b> If you rely on frontier GPUs or cross-border model APIs, this shapes access and cost.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span>Reuters</span><span>Fed · Aug 14</span></div>
+      <h3><a href="https://www.reuters.com/business/cooler-inflation-data-may-force-warshs-divided-fed-hold-line-rates-2026-08-14/" target="_blank" rel="noopener noreferrer">Fed divided: benign CPI may force a hold, not a cut — Reuters</a></h3>
+      <p>Cooler inflation is paradoxically hardening a hold stance at a divided Fed, per Reuters Aug 14, as officials weigh sticky services and fiscal crosscurrents heading into September.</p>
+      <div class="why"><b>Why it matters:</b> Rate expectations anchor both tech valuations and AI capex financing costs.</div>
+      <div class="care"><b>Why you care:</b> Watch dot plot and Fed speakers into September for the next multiple move.</div>
+    </article>
+    <article class="card">
       <div class="meta"><span>White House / Holland &amp; Knight</span><span>Policy</span></div>
-      <h3><a href="https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/" target="_blank" rel="noopener noreferrer">White House national AI policy framework — push for unified federal approach</a></h3>
-      <p>The White House framework outlines nonbinding recommendations for a single federal AI regulatory approach, aiming to preempt a patchwork of state laws.</p>
-      <div class="why"><b>Why it matters:</b> A unified framework would lower compliance complexity for AI products operating across states.</div>
-      <div class="care"><b>Why you care:</b> If you&#x27;re shipping an AI product in the U.S., this shapes your risk and deployment checklist.</div>
+      <h3><a href="https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/" target="_blank" rel="noopener noreferrer">White House national AI policy framework — bid for unified federal approach</a></h3>
+      <p>The White House framework pitches nonbinding recommendations for a single federal AI approach, aiming to preempt a patchwork of state laws and ease deployment complexity.</p>
+      <div class="why"><b>Why it matters:</b> A unified framework would lower compliance overhead for AI products operating across states.</div>
+      <div class="care"><b>Why you care:</b> Relevant if you ship an AI product in the US — affects your risk checklist.</div>
     </article></div></section><section id="for_you"><h2>🎯 For You</h2><div class="grid">
     <article class="card">
       <div class="meta"><span>For You</span><span></span></div>
-      <h3><a href="https://blog.langchain.com/langchain-langgraph-1dot0/" target="_blank" rel="noopener noreferrer">Worth reading — LangGraph 1.0 durable state (your #24 Durable workflows)</a></h3>
-      <p>If you only read one thing, read the LangGraph 1.0 post on checkpointed, recoverable graphs. It answers Production question: what happens when your agent loop dies mid-tool-call?</p>
-      <div class="why"><b>Why it matters:</b> Directly builds your mental model: State machine &gt; free-form loop for reliability.</div>
-      <div class="care"><b>Why you care:</b> Connects to durability/idempotency — the cheapest way to make your small-game agent survive restarts.</div>
+      <h3><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener noreferrer">Read this if auto mode scares you — design your harness before enabling autonomy</a></h3>
+      <p>Claude Code going auto-default is your cue to define permission tiers, filesystem fences, and rollback before you ship any autonomous loop — audit what auto would have done on your repo first.</p>
+      <div class="why"><b>Why it matters:</b> Autonomy without guardrails is a foot-gun; harness design is now the differentiator.</div>
+      <div class="care"><b>Why you care:</b> Exercise: list 3 disallowed actions and 3 auto-retry rules for your next agent.</div>
     </article>
     <article class="card">
       <div class="meta"><span>For You</span><span></span></div>
-      <h3><a href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">Worth saving — NVFP4 KV cache (your #5 Context engineering)</a></h3>
-      <p>Save the NVIDIA NVFP4 post as your reference for why agentic long-context gets expensive and how quantization changes the math.</p>
-      <div class="why"><b>Why it matters:</b> You&#x27;ll reuse this when you design your own agent&#x27;s memory/window strategy.</div>
-      <div class="care"><b>Why you care:</b> Links #5 Context window and #22 Cost/latency in one concrete infra technique.</div>
+      <h3><a href="https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/" target="_blank" rel="noopener noreferrer">Save — NVFP4 KV cache as your long-context cost cheat sheet</a></h3>
+      <p>Bookmark the NVFP4 post. When you size your agent&#x27;s memory window, this tells you how quantizing the KV cache changes dollars per long-horizon task — cheaper than shrinking context naively.</p>
+      <div class="why"><b>Why it matters:</b> You&#x27;ll reuse it on every architecture review for agent cost.</div>
+      <div class="care"><b>Why you care:</b> Links your #5 Context window to #22 Cost/latency in one technique.</div>
     </article>
     <article class="card">
       <div class="meta"><span>For You</span><span></span></div>
-      <h3><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener noreferrer">Interesting connection — smaller agentic models + harness hardening</a></h3>
-      <p>Glimmer + Gemini Flash + GPT-5.6 token efficiency together signal a shift: labs optimize for agent economics, while LangGraph/Nova Act/Claude Code harden the harness. The next leap is not bigger models but cheaper, durable agents.</p>
-      <div class="why"><b>Why it matters:</b> Helps you prioritize learning: harness/runtime &gt; chasing model leaderboards.</div>
-      <div class="care"><b>Why you care:</b> A model you can copy for your own roadmap: cheap router model + durable orchestration.</div>
+      <h3><a href="https://www.forbes.com/sites/antoniopequenoiv/2026/08/11/gemini-becomes-googles-fastest-growing-product-ever-after-hitting-1-billion-monthly-users/" target="_blank" rel="noopener noreferrer">Distribution &gt; model — what Gemini at 1B users teaches your product thinking</a></h3>
+      <p>Gemini&#x27;s 1B MAU came from bundling into search, Workspace, and Android — not a bigger model. For your small-game idea, ask: what distribution surface already has your users?</p>
+      <div class="why"><b>Why it matters:</b> Solo builders win on distribution, not parameter count.</div>
+      <div class="care"><b>Why you care:</b> Prompt to sketch one integration wedge (e.g., Sheets plugin, Chrome side-panel) for your next prototype.</div>
     </article></div></section>
-<footer>Generated by Hermes · 2026-08-15T23:49:34.088086+00:00</footer>
+<footer>Generated by Hermes · 2026-08-16T00:20:56.844516+00:00</footer>
 </main></body></html>
