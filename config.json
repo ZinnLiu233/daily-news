@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Zijing Daily",
+    "title": "pika - daily",
     "subtitle": "AI · Infra · Products · Markets · World",
     "timezone": "America/Los_Angeles",
     "base_path": "/daily-news"
@@ -40,7 +40,7 @@
     {
       "id": "world",
       "title": "🌎 World / US",
-      "max_items": 5
+      "max_items": 8
     },
     {
       "id": "for_you",
